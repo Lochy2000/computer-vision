@@ -10,6 +10,22 @@ protect the `cctv_data` directory, and delete data when it is no longer needed.
 
 ## Setup
 
+TDLR
+py -m venv .face-venv
+.\.face-venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+.\download_face_models.ps1
+
+python face_cctv.py enroll --name "Your Name"
+python face_cctv.py run
+python face_cctv.py report
+
+If youre using an external camera plugged into a computer use
+
+python face_cctv.py run --camera 1
+
+python face_cctv.py enroll --name "Your Name" --camera 1
+
 The existing `.venv` is currently broken because its original Microsoft Store
 Python installation is inaccessible. Install or repair Python 3.11+ first, then
 open PowerShell in this folder and run:
