@@ -1,0 +1,5 @@
+.face-venv/
+cctv_data/
+models/
+__pycache__/
+*.pyc
