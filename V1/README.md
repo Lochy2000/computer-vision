@@ -8,6 +8,10 @@ on screen but are not stored or logged.
 Face embeddings are biometric data. Only enrol people with their permission,
 protect the `cctv_data` directory, and delete data when it is no longer needed.
 
+https://github.com/FoundationVision/ByteTrack
+https://github.com/opencv/opencv_zoo/tree/main/models/object_detection_nanodet
+
+
 ## Setup
 
 TDLR
