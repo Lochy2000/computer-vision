@@ -15,8 +15,8 @@ https://github.com/opencv/opencv_zoo/tree/main/models/object_detection_nanodet
 ## Setup
 
 TDLR
-py -m venv .face-venv
-.\.face-venv\Scripts\Activate.ps1
+py -3.13 -m venv .cctv-venv
+.\.cctv-venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 .\download_face_models.ps1
 
@@ -35,8 +35,8 @@ Python installation is inaccessible. Install or repair Python 3.11+ first, then
 open PowerShell in this folder and run:
 
 ```powershell
-py -m venv .face-venv
-.\.face-venv\Scripts\Activate.ps1
+py -3.13 -m venv .cctv-venv
+.\.cctv-venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 .\download_face_models.ps1
 ```

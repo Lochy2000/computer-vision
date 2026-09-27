@@ -18,6 +18,8 @@ from pathlib import Path
 import cv2 as cv
 import numpy as np
 
+from person_tracking import PersonDetector, PersonTracker, track_containing_face
+
 
 ROOT = Path(__file__).resolve().parent
 MODELS = ROOT / "models"
@@ -27,7 +29,9 @@ RECOGNIZER_MODEL = MODELS / "face_recognition_sface_2021dec.onnx"
 DATABASE_FILE = DATA / "faces.json"
 EVENT_FILE = DATA / "events.csv"
 REPORT_FILE = DATA / "report.html"
+PERSON_MODEL = ROOT / "object_detection_nanodet_2022nov_int8bq.onnx"
 MATCH_THRESHOLD = 0.363
+PERSON_DETECTION_INTERVAL = 3
 
 
 def safe_name(value: str) -> str:
@@ -104,6 +108,14 @@ def draw_face(frame: np.ndarray, face: np.ndarray, label: str, score: float) -> 
     cv.putText(frame, text, (x, max(24, y - 8)), cv.FONT_HERSHEY_SIMPLEX, 0.65, colour, 2)
 
 
+def draw_person(frame: np.ndarray, box: np.ndarray, label: str) -> None:
+    x1, y1, x2, y2 = box.astype(int)
+    colour = (255, 180, 40)
+    cv.rectangle(frame, (x1, y1), (x2, y2), colour, 2)
+    cv.putText(frame, label, (x1, max(52, y1 - 8)),
+               cv.FONT_HERSHEY_SIMPLEX, 0.65, colour, 2)
+
+
 def open_camera(camera: int) -> cv.VideoCapture:
     capture = cv.VideoCapture(camera)
     if not capture.isOpened():
@@ -175,11 +187,14 @@ def append_event(name: str, presence: Presence) -> None:
 
 def run(camera: int, absence_seconds: float) -> None:
     engine = FaceEngine()
+    person_detector = PersonDetector(PERSON_MODEL)
+    person_tracker = PersonTracker()
     people = load_database()
     if not people:
         print("No enrolled people yet. Use: python face_cctv.py enroll --name NAME")
     capture = open_camera(camera)
     active: dict[str, Presence] = {}
+    frame_number = 0
     print("Running locally. Press Q or Escape to stop.")
     try:
         while True:
@@ -187,12 +202,21 @@ def run(camera: int, absence_seconds: float) -> None:
             if not ok:
                 break
             now = datetime.now()
+            if frame_number % PERSON_DETECTION_INTERVAL == 0:
+                person_tracker.update(person_detector.detect(frame), now)
+                person_tracker.pop_expired()
+            frame_number += 1
+
             seen_now: set[str] = set()
             for face in engine.detect(frame):
                 feature = engine.embedding(frame, face)
                 name, score = identify(feature, people)
                 draw_face(frame, face, name, score)
                 if name != "Unknown":
+                    track = track_containing_face(face, list(person_tracker.tracks.values()))
+                    if track is not None:
+                        track.name = name
+                        track.best_face_score = max(track.best_face_score, score)
                     seen_now.add(name)
                     if name not in active:
                         active[name] = Presence(now, now, score)
@@ -207,7 +231,10 @@ def run(camera: int, absence_seconds: float) -> None:
             for name in expired:
                 append_event(name, active.pop(name))
 
-            cv.putText(frame, f"Known people present: {len(active)}", (10, 28),
+            for track in person_tracker.tracks.values():
+                draw_person(frame, track.box, track.label)
+
+            cv.putText(frame, f"People: {len(person_tracker.tracks)} | Known: {len(active)}", (10, 28),
                        cv.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
             cv.imshow("Local Face CCTV", frame)
             if cv.waitKey(1) & 0xFF in (ord("q"), 27):
