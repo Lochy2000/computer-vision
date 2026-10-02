@@ -1,9 +1,10 @@
 # Local face CCTV prototype
 ![alt text](image.png)
 
-This prototype recognises people who have explicitly been enrolled, records their
-presence locally, and generates an HTML activity report. Unknown faces are shown
-on screen but are not stored or logged.
+This prototype uses NanoDet and ByteTrack to follow people, recognises people who
+have explicitly been enrolled, records their presence locally, and generates an
+HTML activity report. Unknown faces are not stored; unknown person tracks are
+logged under temporary anonymous IDs such as `Unknown #4`.
 
 Face embeddings are biometric data. Only enrol people with their permission,
 protect the `cctv_data` directory, and delete data when it is no longer needed.
@@ -68,5 +69,9 @@ python face_cctv.py list
 python face_cctv.py remove --name "Alice"
 ```
 
-The next stage is to connect these identities to NanoDet person boxes and add
-anonymous people counting when no recognisable face is visible.
+## How the live pipeline fits together
+
+`NanoDet person detection -> ByteTrack ID -> optional face identity -> CSV/HTML report`
+
+ByteTrack IDs last only for the current run. A face name is attached to a track
+after three consistent recognition matches, which reduces one-frame mistakes.
