@@ -31,7 +31,7 @@ EVENT_FILE = DATA / "events.csv"
 REPORT_FILE = DATA / "report.html"
 PERSON_MODEL = ROOT / "object_detection_nanodet_2022nov_int8bq.onnx"
 MATCH_THRESHOLD = 0.363
-PERSON_DETECTION_INTERVAL = 3
+PERSON_DETECTION_INTERVAL = 2
 
 
 def safe_name(value: str) -> str:
@@ -188,12 +188,13 @@ def append_event(name: str, presence: Presence) -> None:
 def run(camera: int, absence_seconds: float) -> None:
     engine = FaceEngine()
     person_detector = PersonDetector(PERSON_MODEL)
-    person_tracker = PersonTracker()
     people = load_database()
     if not people:
         print("No enrolled people yet. Use: python face_cctv.py enroll --name NAME")
     capture = open_camera(camera)
-    active: dict[str, Presence] = {}
+    camera_fps = capture.get(cv.CAP_PROP_FPS)
+    person_tracker = PersonTracker(frame_rate=camera_fps if camera_fps > 0 else 30.0,
+                                   expiry_seconds=absence_seconds)
     frame_number = 0
     print("Running locally. Press Q or Escape to stop.")
     try:
@@ -204,10 +205,13 @@ def run(camera: int, absence_seconds: float) -> None:
             now = datetime.now()
             if frame_number % PERSON_DETECTION_INTERVAL == 0:
                 person_tracker.update(person_detector.detect(frame), now)
-                person_tracker.pop_expired()
+                for expired in person_tracker.pop_expired(now):
+                    append_event(
+                        expired.label,
+                        Presence(expired.first_seen, expired.last_seen, expired.best_face_score),
+                    )
             frame_number += 1
 
-            seen_now: set[str] = set()
             for face in engine.detect(frame):
                 feature = engine.embedding(frame, face)
                 name, score = identify(feature, people)
@@ -215,33 +219,23 @@ def run(camera: int, absence_seconds: float) -> None:
                 if name != "Unknown":
                     track = track_containing_face(face, list(person_tracker.tracks.values()))
                     if track is not None:
-                        track.name = name
-                        track.best_face_score = max(track.best_face_score, score)
-                    seen_now.add(name)
-                    if name not in active:
-                        active[name] = Presence(now, now, score)
-                    else:
-                        active[name].last_seen = now
-                        active[name].best_score = max(active[name].best_score, score)
-
-            expired = [
-                name for name, item in active.items()
-                if name not in seen_now and (now - item.last_seen).total_seconds() >= absence_seconds
-            ]
-            for name in expired:
-                append_event(name, active.pop(name))
+                        track.observe_identity(name, score)
 
             for track in person_tracker.tracks.values():
                 draw_person(frame, track.box, track.label)
 
-            cv.putText(frame, f"People: {len(person_tracker.tracks)} | Known: {len(active)}", (10, 28),
+            known_count = sum(track.name != "Unknown" for track in person_tracker.tracks.values())
+            cv.putText(frame, f"People: {len(person_tracker.tracks)} | Known: {known_count}", (10, 28),
                        cv.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
             cv.imshow("Local Face CCTV", frame)
             if cv.waitKey(1) & 0xFF in (ord("q"), 27):
                 break
     finally:
-        for name, presence in active.items():
-            append_event(name, presence)
+        for track in person_tracker.tracks.values():
+            append_event(
+                track.label,
+                Presence(track.first_seen, track.last_seen, track.best_face_score),
+            )
         capture.release()
         cv.destroyAllWindows()
 

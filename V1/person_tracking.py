@@ -1,13 +1,15 @@
-"""Full-person detection and short-lived anonymous tracking."""
+"""NanoDet person detection adapted to the real ByteTrack tracker."""
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
 import cv2 as cv
 import numpy as np
+import supervision as sv
+from trackers import ByteTrackTracker
 
 from nanodet import NanoDet
 
@@ -31,16 +33,16 @@ def _letterbox(frame: np.ndarray, size: int = 416) -> tuple[np.ndarray, tuple[in
 class PersonDetector:
     """Return full-person boxes in the original frame's coordinates."""
 
-    def __init__(self, model_path: Path, confidence: float = 0.4) -> None:
+    def __init__(self, model_path: Path, confidence: float = 0.1) -> None:
         if not model_path.exists():
             raise FileNotFoundError(f"Missing person detector model: {model_path}")
         self.model = NanoDet(str(model_path), prob_threshold=confidence, iou_threshold=0.6)
 
-    def detect(self, frame: np.ndarray) -> list[np.ndarray]:
+    def detect(self, frame: np.ndarray) -> np.ndarray:
         input_frame, (top, left, new_height, new_width) = _letterbox(frame)
         predictions = self.model.infer(cv.cvtColor(input_frame, cv.COLOR_BGR2RGB))
         height, width = frame.shape[:2]
-        boxes: list[np.ndarray] = []
+        detections: list[np.ndarray] = []
         for prediction in predictions:
             if int(prediction[-1]) != PERSON_CLASS_ID:
                 continue
@@ -52,18 +54,10 @@ class PersonDetector:
                 np.clip((y2 - top) * height / new_height, 0, height - 1),
             ], dtype=np.float32)
             if box[2] > box[0] and box[3] > box[1]:
-                boxes.append(box)
-        return boxes
-
-
-def box_iou(first: np.ndarray, second: np.ndarray) -> float:
-    x1, y1 = np.maximum(first[:2], second[:2])
-    x2, y2 = np.minimum(first[2:], second[2:])
-    intersection = max(0.0, x2 - x1) * max(0.0, y2 - y1)
-    first_area = max(0.0, first[2] - first[0]) * max(0.0, first[3] - first[1])
-    second_area = max(0.0, second[2] - second[0]) * max(0.0, second[3] - second[1])
-    union = first_area + second_area - intersection
-    return intersection / union if union else 0.0
+                detections.append(np.append(box, np.float32(prediction[-2])))
+        if not detections:
+            return np.empty((0, 5), dtype=np.float32)
+        return np.asarray(detections, dtype=np.float32)
 
 
 @dataclass
@@ -74,58 +68,66 @@ class TrackedPerson:
     last_seen: datetime
     name: str = "Unknown"
     best_face_score: float = 0.0
-    missed_detections: int = 0
+    identity_scores: dict[str, list[float]] = field(default_factory=dict)
 
     @property
     def label(self) -> str:
         return self.name if self.name != "Unknown" else f"Unknown #{self.track_id}"
 
+    def observe_identity(self, name: str, score: float, votes_required: int = 3) -> None:
+        """Attach a name only after several consistent face matches."""
+        if name == "Unknown":
+            return
+        scores = self.identity_scores.setdefault(name, [])
+        scores.append(score)
+        if len(scores) >= votes_required:
+            winner, winner_scores = max(
+                self.identity_scores.items(), key=lambda item: (len(item[1]), sum(item[1]))
+            )
+            self.name = winner
+            self.best_face_score = max(winner_scores)
+
 
 class PersonTracker:
-    """Greedy IoU tracker suitable for a stationary single-camera prototype."""
+    """Small adapter keeping application state around ByteTrack IDs."""
 
-    def __init__(self, max_missed: int = 5, minimum_iou: float = 0.2) -> None:
-        self.tracks: dict[int, TrackedPerson] = {}
-        self.next_id = 1
-        self.max_missed = max_missed
-        self.minimum_iou = minimum_iou
-
-    def update(self, boxes: list[np.ndarray], now: datetime) -> list[TrackedPerson]:
-        available_tracks = set(self.tracks)
-        available_boxes = set(range(len(boxes)))
-        candidates = sorted(
-            (
-                (box_iou(track.box, box), track_id, box_index)
-                for track_id, track in self.tracks.items()
-                for box_index, box in enumerate(boxes)
-            ),
-            reverse=True,
+    def __init__(self, frame_rate: float = 30.0, expiry_seconds: float = 2.0) -> None:
+        self.tracker = ByteTrackTracker(
+            lost_track_buffer=max(1, round(expiry_seconds * 30)),
+            frame_rate=max(frame_rate, 1.0),
+            track_activation_threshold=0.4,
+            high_conf_det_threshold=0.35,
+            minimum_consecutive_frames=2,
+            minimum_iou_threshold=0.1,
         )
+        self.tracks: dict[int, TrackedPerson] = {}
+        self.expiry_seconds = expiry_seconds
 
-        for overlap, track_id, box_index in candidates:
-            if overlap < self.minimum_iou:
-                break
-            if track_id not in available_tracks or box_index not in available_boxes:
+    def update(self, raw: np.ndarray, now: datetime) -> list[TrackedPerson]:
+        detections = sv.Detections(
+            xyxy=raw[:, :4],
+            confidence=raw[:, 4],
+            class_id=np.zeros(len(raw), dtype=int),
+        )
+        tracked = self.tracker.update(detections, timestamp=now.timestamp())
+        tracker_ids = tracked.tracker_id if tracked.tracker_id is not None else []
+        for box, tracker_id in zip(tracked.xyxy, tracker_ids):
+            tracker_id = int(tracker_id)
+            if tracker_id < 0:
                 continue
-            track = self.tracks[track_id]
-            track.box = boxes[box_index]
-            track.last_seen = now
-            track.missed_detections = 0
-            available_tracks.remove(track_id)
-            available_boxes.remove(box_index)
-
-        for track_id in available_tracks:
-            self.tracks[track_id].missed_detections += 1
-        for box_index in available_boxes:
-            self.tracks[self.next_id] = TrackedPerson(self.next_id, boxes[box_index], now, now)
-            self.next_id += 1
+            if tracker_id not in self.tracks:
+                self.tracks[tracker_id] = TrackedPerson(tracker_id, box.copy(), now, now)
+            else:
+                person = self.tracks[tracker_id]
+                person.box = box.copy()
+                person.last_seen = now
 
         return list(self.tracks.values())
 
-    def pop_expired(self) -> list[TrackedPerson]:
+    def pop_expired(self, now: datetime) -> list[TrackedPerson]:
         expired_ids = [
             track_id for track_id, track in self.tracks.items()
-            if track.missed_detections > self.max_missed
+            if (now - track.last_seen).total_seconds() > self.expiry_seconds
         ]
         return [self.tracks.pop(track_id) for track_id in expired_ids]
 
