@@ -21,7 +21,8 @@ retention policies. Processing and media remain local by default.
    - Automated tests
 2. **Triggered recording — in progress**
    - In-memory pre-event frame buffer — complete
-   - Scene start/stop state machine — next
+   - Scene start/stop state machine — complete
+   - Connect buffer and state signals to a video writer — next
    - Reuse NanoDet, ByteTrack, and SFace from V1
    - One snapshot and MP4 clip per person event
    - Clean start/stop rules and cooldowns
@@ -58,6 +59,7 @@ v1.1/
     config.py       configuration and retention limits
     events.py       event domain model
     frame_buffer.py bounded in-memory pre-event frames
+    scene_state.py  person-count-driven event lifecycle
     repository.py   SQLite persistence
     retention.py    expiry and storage-budget cleanup
   tests/
