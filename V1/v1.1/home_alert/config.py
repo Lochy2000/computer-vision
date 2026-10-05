@@ -27,6 +27,7 @@ class AppConfig:
     camera_index: int = 0
     pre_roll_seconds: float = 5.0
     post_roll_seconds: float = 5.0
+    maximum_pre_roll_bytes: int = 256 * 1024 * 1024
     retention: RetentionConfig = field(default_factory=RetentionConfig)
 
     def __post_init__(self) -> None:
@@ -34,6 +35,8 @@ class AppConfig:
             raise ValueError("Camera index cannot be negative")
         if self.pre_roll_seconds < 0 or self.post_roll_seconds < 0:
             raise ValueError("Recording buffer durations cannot be negative")
+        if self.maximum_pre_roll_bytes < 0:
+            raise ValueError("Maximum pre-roll size cannot be negative")
 
     @classmethod
     def load(cls, path: Path) -> "AppConfig":
