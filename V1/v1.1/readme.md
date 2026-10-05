@@ -19,9 +19,10 @@ retention policies. Processing and media remain local by default.
    - Protected/reviewed/alerted event state
    - Age-based and disk-budget retention
    - Automated tests
-2. **Triggered recording — next**
+2. **Triggered recording — in progress**
+   - In-memory pre-event frame buffer — complete
+   - Scene start/stop state machine — next
    - Reuse NanoDet, ByteTrack, and SFace from V1
-   - In-memory pre-event frame buffer
    - One snapshot and MP4 clip per person event
    - Clean start/stop rules and cooldowns
 3. **Local alerts**
@@ -56,6 +57,7 @@ v1.1/
   home_alert/
     config.py       configuration and retention limits
     events.py       event domain model
+    frame_buffer.py bounded in-memory pre-event frames
     repository.py   SQLite persistence
     retention.py    expiry and storage-budget cleanup
   tests/
