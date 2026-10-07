@@ -29,19 +29,45 @@ python -m pip install -e ".[ultralytics,dev]"
 
 ## Run
 
+On Windows, prefer `run.ps1`; it always selects the v3 virtual environment even
+if another folder's environment is accidentally active:
+
 ```powershell
-drone-detect `
+.\run.ps1 `
   --source path\to\test-video.mp4 `
   --weights models\drone.pt `
   --image-size 1280 `
   --confidence 0.10 `
   --classes drone bird aircraft `
-  --output runs\baseline.jsonl
+  --output runs\baseline.jsonl `
+  --annotated-video runs\baseline.mp4 `
+  --show `
+  --preview-width 960
 ```
 
 Use `--source 0` for the default camera. The low default confidence is
 intentional: the later tracker will use separate acquisition and continuation
 thresholds. It should not yet be treated as an alert threshold.
+Progress is printed every ten frames by default. Press `Ctrl+C` to stop; the
+JSONL and MP4 outputs are then closed cleanly and remain usable.
+`--preview-width` changes only the display window, not detector accuracy or the
+saved video's resolution. Use `--preview-width 0` to display at native size.
+
+### Included local test clip
+
+The development workspace may contain `videos/pexels-drone-meadow-9404253.mp4`,
+a six-second 1080p ground-view sanity-check clip downloaded from Pexels. Video
+binaries are ignored by Git. Its source page is:
+
+https://www.pexels.com/video/a-drone-flying-over-a-grassy-field-9404253/
+
+The initial POC checkpoint is the drone-fine-tuned YOLO11x `best.pt` from:
+
+https://huggingface.co/doguilmak/Drone-Detection-YOLOv11x/tree/main/weight
+
+Store it as `models/drone-yolo11x.pt`. Model files are ignored by Git. This is
+third-party pickle-based PyTorch data, so only load it after accepting the
+source and model-card terms.
 
 ## Output schema
 

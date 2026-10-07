@@ -3,8 +3,10 @@ from __future__ import annotations
 from collections.abc import Iterator
 from pathlib import Path
 from time import perf_counter
+from typing import Callable
 
 import cv2
+import numpy as np
 
 from drone_detection.detectors.base import Detector
 from drone_detection.types import FrameResult
@@ -18,6 +20,7 @@ def process_source(
     source: str | Path,
     detector: Detector,
     max_frames: int | None = None,
+    frame_callback: Callable[[np.ndarray, FrameResult], None] | None = None,
 ) -> Iterator[FrameResult]:
     source_text = str(source)
     capture = cv2.VideoCapture(_capture_source(source_text))
@@ -42,7 +45,7 @@ def process_source(
                 else (frame_index / fps if fps > 0 else 0.0)
             )
             height, width = frame.shape[:2]
-            yield FrameResult(
+            result = FrameResult(
                 frame_index=frame_index,
                 timestamp_seconds=timestamp_seconds,
                 source=source_text,
@@ -51,6 +54,9 @@ def process_source(
                 inference_ms=inference_ms,
                 detections=detections,
             )
+            if frame_callback is not None:
+                frame_callback(frame, result)
+            yield result
             frame_index += 1
     finally:
         capture.release()
