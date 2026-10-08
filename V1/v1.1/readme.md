@@ -22,7 +22,8 @@ retention policies. Processing and media remain local by default.
 2. **Triggered recording — in progress**
    - In-memory pre-event frame buffer — complete
    - Scene start/stop state machine — complete
-   - Connect buffer and state signals to a video writer — next
+   - Buffer/state/recorder coordination — complete with in-memory tests
+   - Implement and test the OpenCV MP4 recording sink — next
    - Reuse NanoDet, ByteTrack, and SFace from V1
    - One snapshot and MP4 clip per person event
    - Clean start/stop rules and cooldowns
@@ -57,6 +58,7 @@ The tests use temporary directories and do not touch real event data.
 v1.1/
   home_alert/
     config.py       configuration and retention limits
+    coordinator.py  connects frames, state signals and a recording sink
     events.py       event domain model
     frame_buffer.py bounded in-memory pre-event frames
     scene_state.py  person-count-driven event lifecycle
