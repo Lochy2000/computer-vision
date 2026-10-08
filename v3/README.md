@@ -18,7 +18,7 @@ This prevents accidental use of unverified or non-commercial training material.
 See [DATASETS.md](DATASETS.md) for the licence register.
 See [BENCHMARKING.md](BENCHMARKING.md) for the portable model/device comparison
 contract and preserved artifact manifests.
-See [TRAINING.md](TRAINING.md) for the gated YOLO11s/YOLO11m experiment plan.
+See [TRAINING.md](TRAINING.md) for the gated YOLO26n-first experiment plan.
 
 ## Install
 

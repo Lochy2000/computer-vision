@@ -7,4 +7,5 @@ models/
 data/
 runs/
 videos/*.mp4
+audits/**/scene_features.npz
 

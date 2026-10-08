@@ -47,8 +47,10 @@
         "holdout_with_train_pixel_correlation_gte_0_95": 686,
         "holdout_with_train_pixel_correlation_gte_0_98": 536,
         "pure_negative_images": 0,
-        "split_remediation_required": true,
-        "approved_for_training": false
+        "split_remediation_required": false,
+        "approved_split": "splits/ub-sod-scene-v1/split_manifest.json",
+        "approved_for_controlled_training": true,
+        "approved_for_final_field_evaluation": false
       }
     }
   ]
