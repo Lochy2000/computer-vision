@@ -31,12 +31,16 @@
           "size_bytes": 2198608426,
           "url": "https://ndownloader.figshare.com/files/68558218",
           "sha256": "0248371904e49b4b5f8fde7276ae2e203c98d808f41354714bb675450e7ef7b8",
-          "local_status": "not_downloaded"
+          "local_status": "downloaded_verified_and_extracted"
         }
       ],
       "audit": {
         "split_filename_overlap": 0,
         "label_files": 7118,
+        "image_files": 7118,
+        "images_without_labels": 0,
+        "labels_without_images": 0,
+        "missing_split_images": 0,
         "unexpected_class_lines": 0,
         "visual_image_audit": "pending",
         "approved_for_training": false

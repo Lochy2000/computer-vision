@@ -8,7 +8,7 @@ prove the rights to its source images.
 
 | Dataset/source | Modality | Displayed terms | v3 status |
 |---|---|---|---|
-| UB-SOD / Figshare 33733090 | RGB, UAV + bird | CC BY 4.0 on the formal Figshare record | **Preferred first candidate**; annotation and split archives verified locally, images pending |
+| UB-SOD / Figshare 33733090 | RGB, UAV + bird | CC BY 4.0 on the formal Figshare record | **Preferred first candidate**; archives and extracted file relationships verified locally, visual audit pending |
 | Roboflow Anti-UAV (`gia-bao-nguyen-k74rm`) | RGB | CC BY 4.0 displayed by host | Candidate; verify image provenance |
 | Roboflow Anti-drone (`drone-detection-fn0bd`) | RGB | CC BY 4.0 displayed by host | Candidate; verify image provenance |
 | DroneDetect / IEEE DataPort | RGB | Claimed CC BY 4.0; record could not be independently fetched | Verify before use |
@@ -45,7 +45,10 @@ Acquisition audit performed 2026-10-07:
 - 5,765 train, 641 validation and 712 test entries; no filename overlap.
 - 7,118 YOLO label files with 10,047 UAV and 7,995 bird instances.
 - No unexpected class IDs were found in the annotation archive.
-- The 2,198,608,426-byte image archive has not yet been downloaded.
+- The 2,198,608,426-byte image archive matched the publisher SHA-256 and was
+  extracted on 2026-10-08.
+- All 7,118 images have a corresponding YOLO label; every supplied split entry
+  resolves to an image, with no orphan image or label filenames.
 
 See `manifests/datasets.json` for immutable URLs and checksums. Dataset files
 remain under ignored `data/`; attribution and the licence must accompany any
