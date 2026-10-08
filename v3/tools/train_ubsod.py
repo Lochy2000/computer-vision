@@ -15,6 +15,11 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATASET_ROOT = REPO_ROOT / "data" / "UB-SOD-release" / "verified-tar"
 DEFAULT_SPLIT_ROOT = REPO_ROOT / "splits" / "ub-sod-scene-v1"
 EXPECTED_COUNTS = {"train": 5367, "val": 876, "test": 875}
+EXPECTED_CANONICAL_HASHES = {
+    "train": "2e6100e2c3f9cd5019f45bd90b4090cc7bc5ee270ae97d020c21245c86832921",
+    "val": "c6215299af7eedc0baf70e394b64ce18519f0937be267a433568a1008465927a",
+    "test": "e931bf035b9e091b019ad3c0576fe36dd05e8d2be774939ce4e181c1a3445d92",
+}
 CLASS_NAMES = {0: "UAV", 1: "Bird"}
 
 
@@ -41,6 +46,7 @@ def preflight(dataset_root: Path, split_root: Path) -> dict:
 
     splits: dict[str, list[str]] = {}
     split_hashes: dict[str, str] = {}
+    canonical_split_hashes: dict[str, str] = {}
     missing: list[str] = []
     bad_labels: list[str] = []
 
@@ -51,6 +57,14 @@ def preflight(dataset_root: Path, split_root: Path) -> dict:
             raise ValueError(f"{split_file} has {len(entries)} entries; expected {expected}")
         splits[split] = entries
         split_hashes[split] = sha256(split_file)
+        canonical_content = "\n".join(sorted(entries)) + "\n"
+        canonical_hash = hashlib.sha256(canonical_content.encode("utf-8")).hexdigest()
+        canonical_split_hashes[split] = canonical_hash
+        if canonical_hash != EXPECTED_CANONICAL_HASHES[split]:
+            raise ValueError(
+                f"{split_file} membership hash is {canonical_hash}; "
+                f"expected audited scene-v1 hash {EXPECTED_CANONICAL_HASHES[split]}"
+            )
 
         for relative_image in entries:
             image = dataset_root / relative_image
@@ -87,19 +101,26 @@ def preflight(dataset_root: Path, split_root: Path) -> dict:
         "classes": CLASS_NAMES,
         "counts": {name: len(entries) for name, entries in splits.items()},
         "split_sha256": split_hashes,
+        "canonical_split_sha256": canonical_split_hashes,
         "missing_images_or_labels": 0,
         "invalid_labels": 0,
         "cross_split_filename_overlap": 0,
     }
 
 
-def write_training_yaml(dataset_root: Path, split_root: Path, output: Path) -> None:
+def write_resolved_split(dataset_root: Path, source: Path, output: Path) -> None:
+    entries = read_split(source)
+    resolved = [(dataset_root.resolve() / entry).as_posix() for entry in entries]
+    output.write_text("\n".join(resolved) + "\n", encoding="utf-8")
+
+
+def write_training_yaml(dataset_root: Path, run_dir: Path, output: Path) -> None:
     # Absolute paths make resolution unambiguous on Windows and in Colab. The
     # generated file is a run artifact; source split files remain portable.
     lines = [
         f"path: {json.dumps(dataset_root.resolve().as_posix())}",
-        f"train: {json.dumps((split_root.resolve() / 'train.txt').as_posix())}",
-        f"val: {json.dumps((split_root.resolve() / 'val.txt').as_posix())}",
+        f"train: {json.dumps((run_dir / 'train.resolved.txt').as_posix())}",
+        f"val: {json.dumps((run_dir / 'val.resolved.txt').as_posix())}",
         "names:",
         "  0: UAV",
         "  1: Bird",
@@ -117,11 +138,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--batch", type=int, default=-1, help="Batch size; -1 enables Ultralytics automatic sizing")
+    parser.add_argument("--fraction", type=float, default=1.0, help="Fraction of the training split to use")
+    parser.add_argument("--save-period", type=int, default=5, help="Save an additional checkpoint every N epochs")
     parser.add_argument("--device", default=None, help="For example 0, cpu, or mps")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--project", type=Path, default=REPO_ROOT / "runs" / "train")
     parser.add_argument("--name", default="ubsod-scene-v1-yolo26n-640")
+    parser.add_argument("--resume", type=Path, help="Resume from an existing last.pt checkpoint")
     parser.add_argument("--preflight-only", action="store_true")
     return parser.parse_args()
 
@@ -131,7 +155,10 @@ def main() -> None:
     report = preflight(args.dataset_root, args.split_root)
     run_dir = args.project.resolve() / args.name
     config_path = run_dir / "dataset.generated.yaml"
-    write_training_yaml(args.dataset_root, args.split_root, config_path)
+    run_dir.mkdir(parents=True, exist_ok=True)
+    write_resolved_split(args.dataset_root, args.split_root / "train.txt", run_dir / "train.resolved.txt")
+    write_resolved_split(args.dataset_root, args.split_root / "val.txt", run_dir / "val.resolved.txt")
+    write_training_yaml(args.dataset_root, run_dir, config_path)
 
     report.update(
         {
@@ -139,6 +166,8 @@ def main() -> None:
             "imgsz": args.imgsz,
             "epochs": args.epochs,
             "batch": args.batch,
+            "fraction": args.fraction,
+            "save_period": args.save_period,
             "device": args.device,
             "workers": args.workers,
             "seed": args.seed,
@@ -147,7 +176,6 @@ def main() -> None:
             "dataset_yaml": str(config_path),
         }
     )
-    run_dir.mkdir(parents=True, exist_ok=True)
     (run_dir / "preflight.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 
@@ -156,19 +184,21 @@ def main() -> None:
         return
 
     completed_artifacts = [run_dir / "results.csv", run_dir / "weights" / "best.pt", run_dir / "weights" / "last.pt"]
-    if any(path.exists() for path in completed_artifacts):
+    if args.resume is None and any(path.exists() for path in completed_artifacts):
         raise FileExistsError(
             f"Training artifacts already exist in {run_dir}. Choose a new --name so an earlier run is not overwritten."
         )
 
     from ultralytics import YOLO
 
-    model = YOLO(args.model)
+    model = YOLO(str(args.resume.resolve()) if args.resume else args.model)
     train_args = {
         "data": str(config_path),
         "imgsz": args.imgsz,
         "epochs": args.epochs,
         "batch": args.batch,
+        "fraction": args.fraction,
+        "save_period": args.save_period,
         "workers": args.workers,
         "seed": args.seed,
         "deterministic": True,
@@ -181,6 +211,8 @@ def main() -> None:
     }
     if args.device is not None:
         train_args["device"] = args.device
+    if args.resume:
+        train_args["resume"] = True
     model.train(**train_args)
 
 

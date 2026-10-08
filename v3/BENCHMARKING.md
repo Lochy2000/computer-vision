@@ -98,3 +98,31 @@ An empty YOLO label file is valid only for a human-reviewed negative image.
 The same test suite and reporting schema should be used everywhere. Accuracy
 must be rechecked after quantisation or conversion; matching architecture names
 do not guarantee numerically identical outputs.
+
+## Evaluate the selected model once on the locked UB-SOD test split
+
+Do not run this command while selecting epochs, confidence thresholds,
+architectures or augmentations. Use validation results for those choices. After
+the final checkpoint has been selected, the evaluator verifies the frozen
+scene-v1 membership, requires an explicit confirmation phrase, refuses to
+overwrite an existing report, and evaluates all 875 locked test images.
+
+```powershell
+python -m drone_detection.model_evaluation `
+  --weights runs\colab-imports\ubsod-scene-v1-yolo26n-640-seed42\weights\best.pt `
+  --model-id ubsod-scene-v1-yolo26n-640-seed42 `
+  --dataset-root data\UB-SOD-release\verified-tar `
+  --split-root splits\ub-sod-scene-v1 `
+  --output evaluations\ubsod-scene-v1-yolo26n-640-seed42\locked-test.json `
+  --artifacts-dir evaluations\ubsod-scene-v1-yolo26n-640-seed42\artifacts `
+  --device cpu `
+  --imgsz 640 `
+  --batch 16 `
+  --confirm evaluate-locked-test-once
+```
+
+The JSON record includes checkpoint and training-artifact hashes, exact split
+membership hashes, environment versions, overall and per-class metrics, and
+the location of confusion matrices and PR/F1 plots. Add the selected model to
+`manifests/models.json` only after this record and the training run have been
+audited.

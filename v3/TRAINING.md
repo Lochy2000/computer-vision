@@ -73,6 +73,21 @@ is then:
 python tools\train_ubsod.py --device 0
 ```
 
+For a one-epoch smoke test, use a separate run name and ten percent of the
+training split:
+
+```powershell
+python tools\train_ubsod.py --device 0 --epochs 1 --fraction 0.1 --name ubsod-scene-v1-yolo26n-smoke
+```
+
+Long Colab runs should set `--project` to a Google Drive directory. The script
+saves `last.pt` every epoch and an additional checkpoint every five epochs by
+default. Resume an interrupted run with:
+
+```powershell
+python tools\train_ubsod.py --device 0 --project <same-project> --name <same-name> --resume <same-project>/<same-name>/weights/last.pt
+```
+
 The script starts from generic pretrained `yolo26n.pt` weights and fine-tunes
 two detection classes: `UAV` and `Bird`. It never includes the locked test list
 in the training YAML. Do not run this full command on the current CPU-only
