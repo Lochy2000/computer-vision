@@ -42,7 +42,12 @@
         "labels_without_images": 0,
         "missing_split_images": 0,
         "unexpected_class_lines": 0,
-        "visual_image_audit": "pending",
+        "visual_image_audit": "completed_with_scene_leakage_warning",
+        "holdout_images": 1353,
+        "holdout_with_train_pixel_correlation_gte_0_95": 686,
+        "holdout_with_train_pixel_correlation_gte_0_98": 536,
+        "pure_negative_images": 0,
+        "split_remediation_required": true,
         "approved_for_training": false
       }
     }

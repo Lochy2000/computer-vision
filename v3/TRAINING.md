@@ -40,3 +40,11 @@ resulting weights specific to that hardware.
 
 Epoch count, batch size and augmentation are intentionally not fixed until the
 images and available training hardware have been audited.
+
+## Audit gate status
+
+The structural and visual audit completed on 2026-10-08. Annotation validity
+passed, but the supplied image-level splits failed the scene-independence gate:
+hundreds of validation/test images closely match training scenes. Training is
+still blocked until scene/recording-level splits are rebuilt and re-audited.
+The evidence is in `audits/ub-sod/AUDIT_REPORT.md`.

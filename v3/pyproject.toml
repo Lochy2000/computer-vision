@@ -15,7 +15,7 @@ dependencies = [
 [project.optional-dependencies]
 ultralytics = ["ultralytics>=8.3"]
 edge = ["openvino>=2025.0,<2027"]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "nbformat>=5.10", "nbclient>=0.10", "ipykernel>=6"]
 
 [project.scripts]
 drone-detect = "drone_detection.cli:main"

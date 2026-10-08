@@ -8,7 +8,7 @@ prove the rights to its source images.
 
 | Dataset/source | Modality | Displayed terms | v3 status |
 |---|---|---|---|
-| UB-SOD / Figshare 33733090 | RGB, UAV + bird | CC BY 4.0 on the formal Figshare record | **Preferred first candidate**; archives and extracted file relationships verified locally, visual audit pending |
+| UB-SOD / Figshare 33733090 | RGB, UAV + bird | CC BY 4.0 on the formal Figshare record | **Conditional training source**; annotations pass, but supplied splits show material scene leakage and must be rebuilt |
 | Roboflow Anti-UAV (`gia-bao-nguyen-k74rm`) | RGB | CC BY 4.0 displayed by host | Candidate; verify image provenance |
 | Roboflow Anti-drone (`drone-detection-fn0bd`) | RGB | CC BY 4.0 displayed by host | Candidate; verify image provenance |
 | DroneDetect / IEEE DataPort | RGB | Claimed CC BY 4.0; record could not be independently fetched | Verify before use |
@@ -53,4 +53,11 @@ Acquisition audit performed 2026-10-07:
 See `manifests/datasets.json` for immutable URLs and checksums. Dataset files
 remain under ignored `data/`; attribution and the licence must accompany any
 redistribution or derived release.
+
+The 2026-10-08 visual and perceptual audit found repeated airport viewpoints
+and apparent recording sequences across train, validation and test. Of 1,353
+holdout images, 686 have a perceptually close training candidate with direct
+resized-pixel correlation of at least 0.95. The supplied splits must therefore
+not be used as independent evidence of model generalisation. See
+`audits/ub-sod/AUDIT_REPORT.md` for the complete findings and remediation.
 
