@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-07T18:25:25.751714+00:00",
+  "source": {
+    "id": "pexels-meadow-close-drone-v1",
+    "path": "videos/pexels-drone-meadow-9404253.mp4",
+    "sha256": "ca9cc6f7badc84ec90dd21b62c51435a5eff8598eefbe09cdda5d5a1f73402b4",
+    "frame_count": 178,
+    "fps": 29.97002997002997
+  },
+  "classes": [
+    {
+      "id": 0,
+      "name": "drone"
+    }
+  ],
+  "selection": {
+    "method": "evenly_spaced",
+    "requested": 12
+  },
+  "images": [
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000000",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000000.jpg",
+      "image_sha256": "915ede9a28b6004e812396340a7bc5df9ac23586625f444c93f8d3294fce3470",
+      "source_frame_index": 0,
+      "timestamp_seconds": 0.0,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000016",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000016.jpg",
+      "image_sha256": "51a799b667ec3538cbd9af9f316dab285b28fff78979f46cf69afa06f5351e5e",
+      "source_frame_index": 16,
+      "timestamp_seconds": 0.5338666666666667,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000032",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000032.jpg",
+      "image_sha256": "2f3768ad0848408ac7f446f259bf1ab56b681ef60a93b16eb3b06666d6bb30ba",
+      "source_frame_index": 32,
+      "timestamp_seconds": 1.0677333333333334,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000048",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000048.jpg",
+      "image_sha256": "41848935471cb2007247da5519ab0163450a816e7251afac48e68f24ef1f93fe",
+      "source_frame_index": 48,
+      "timestamp_seconds": 1.6016000000000001,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000064",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000064.jpg",
+      "image_sha256": "e93eefbcae640ce98e50b3626e3d7615bdfac34f22edd946c51f9f37c0827e40",
+      "source_frame_index": 64,
+      "timestamp_seconds": 2.135466666666667,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000080",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000080.jpg",
+      "image_sha256": "f96409edb185b5eda503ca78c5881595c0b395b9d1b4a3037ac0853dd1afe447",
+      "source_frame_index": 80,
+      "timestamp_seconds": 2.6693333333333333,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000097",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000097.jpg",
+      "image_sha256": "018db335abd06a1cdf488f90d228f1272e1138527594b7ecd30a4840cbd12196",
+      "source_frame_index": 97,
+      "timestamp_seconds": 3.2365666666666666,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000113",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000113.jpg",
+      "image_sha256": "96bbf5291dd0c554969e4ec89c2575eeba1782fe9d1cf9cff3b8198f93420c3f",
+      "source_frame_index": 113,
+      "timestamp_seconds": 3.7704333333333335,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000129",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000129.jpg",
+      "image_sha256": "b93bd68c5d68addef73ea7cebbe0dfe80069a50fbe3e59e1143de4a788507034",
+      "source_frame_index": 129,
+      "timestamp_seconds": 4.3043000000000005,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000145",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000145.jpg",
+      "image_sha256": "5ed0a1b18e20021287c75493552b3ef9823ce453ebfce54b384e0fcd23e648f8",
+      "source_frame_index": 145,
+      "timestamp_seconds": 4.838166666666667,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000161",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000161.jpg",
+      "image_sha256": "49bc359d0eed1933db2875a091ad14a615d117078f02fd4d204c242d8c0d760c",
+      "source_frame_index": 161,
+      "timestamp_seconds": 5.372033333333333,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    },
+    {
+      "id": "pexels-meadow-close-drone-v1-frame-000177",
+      "image": "data/evaluation/candidates/pexels-meadow/pexels-meadow-close-drone-v1-frame-000177.jpg",
+      "image_sha256": "fcdbe867f2e3e93be692ac7602b9c7cc032d0d12378a79b12a263ec4779ab69f",
+      "source_frame_index": 177,
+      "timestamp_seconds": 5.9059,
+      "width": 1920,
+      "height": 1080,
+      "modality": "rgb",
+      "split": "unassigned",
+      "scenario": "close_drone_meadow",
+      "annotation_status": "pending",
+      "label": null
+    }
+  ],
+  "ready_for_accuracy_evaluation": false,
+  "blocking_reason": "Human-reviewed bounding-box annotations are not complete."
+}

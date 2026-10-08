@@ -13,7 +13,11 @@ def build_parser() -> argparse.ArgumentParser:
         description="Run a detector and write model-independent JSONL results."
     )
     parser.add_argument("--source", required=True, help="Video path, stream URL, or camera ID")
-    parser.add_argument("--weights", required=True, help="Local Ultralytics .pt weights")
+    parser.add_argument(
+        "--weights",
+        required=True,
+        help="Local Ultralytics .pt weights or exported model directory",
+    )
     parser.add_argument("--output", default="runs/detections.jsonl")
     parser.add_argument("--annotated-video", help="Optional output MP4 with detection boxes")
     parser.add_argument("--output-fps", type=float, default=30.0)
@@ -52,6 +56,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     frames = 0
     total_inference_ms = 0.0
+    steady_inference_ms = 0.0
     started = perf_counter()
     video_writer = (
         AnnotatedVideoWriter(args.annotated_video, args.output_fps)
@@ -84,6 +89,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                 writer.write(result)
                 frames += 1
                 total_inference_ms += result.inference_ms
+                if frames > 1:
+                    steady_inference_ms += result.inference_ms
                 if args.progress_every > 0 and frames % args.progress_every == 0:
                     elapsed = perf_counter() - started
                     print(
@@ -105,9 +112,14 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     average_ms = total_inference_ms / frames if frames else 0.0
     processing_fps = 1000.0 / average_ms if average_ms else 0.0
+    steady_frames = max(0, frames - 1)
+    steady_average_ms = steady_inference_ms / steady_frames if steady_frames else 0.0
+    steady_fps = 1000.0 / steady_average_ms if steady_average_ms else 0.0
     print(
         f"Processed {frames} frames; detector mean {average_ms:.2f} ms/frame "
-        f"({processing_fps:.2f} FPS); results: {args.output}"
+        f"({processing_fps:.2f} FPS including startup); "
+        f"steady-state {steady_average_ms:.2f} ms/frame ({steady_fps:.2f} FPS); "
+        f"results: {args.output}"
     )
     return 130 if interrupted else 0
 

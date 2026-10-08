@@ -16,6 +16,9 @@ inference and sensor fusion will build on the same detection schema.
 The project deliberately does not automatically download weights or datasets.
 This prevents accidental use of unverified or non-commercial training material.
 See [DATASETS.md](DATASETS.md) for the licence register.
+See [BENCHMARKING.md](BENCHMARKING.md) for the portable model/device comparison
+contract and preserved artifact manifests.
+See [TRAINING.md](TRAINING.md) for the gated YOLO11s/YOLO11m experiment plan.
 
 ## Install
 
@@ -24,7 +27,7 @@ From this directory:
 ```powershell
 py -m venv .venv
 .venv\Scripts\Activate.ps1
-python -m pip install -e ".[ultralytics,dev]"
+python -m pip install -e ".[ultralytics,edge,dev]"
 ```
 
 ## Run
@@ -68,6 +71,37 @@ https://huggingface.co/doguilmak/Drone-Detection-YOLOv11x/tree/main/weight
 Store it as `models/drone-yolo11x.pt`. Model files are ignored by Git. This is
 third-party pickle-based PyTorch data, so only load it after accepting the
 source and model-card terms.
+
+Commercial-use warning: the third-party Hugging Face model card labels the
+checkpoint MIT, but the exported Ultralytics metadata labels the resulting
+model AGPL-3.0. Treat this checkpoint as POC-only until the base-model,
+fine-tuned-weight, training-data, and Ultralytics commercial rights have been
+resolved in writing.
+
+## Intel GPU acceleration
+
+This workspace includes an FP16 OpenVINO export at
+`models/drone-yolo11x_openvino_model`. On the tested Intel Iris Xe laptop, it
+must be explicitly assigned to the GPU; automatic selection used the slower
+CPU backend:
+
+```powershell
+.\run.ps1 `
+  --source videos\pexels-drone-meadow-9404253.mp4 `
+  --weights models\drone-yolo11x_openvino_model `
+  --device intel:gpu `
+  --image-size 640 `
+  --confidence 0.10 `
+  --classes drone `
+  --output runs\openvino-gpu.jsonl `
+  --annotated-video runs\openvino-gpu.mp4 `
+  --show `
+  --preview-width 640
+```
+
+The first inference compiles the model for the GPU and can take around 20
+seconds. Subsequent frames are substantially faster. See
+[BENCHMARKS.md](BENCHMARKS.md) for measured results.
 
 ## Output schema
 

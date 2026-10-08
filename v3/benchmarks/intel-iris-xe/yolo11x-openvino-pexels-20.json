@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-07T18:16:54.444167+00:00",
+  "model": {
+    "id": "drone-yolo11x-openvino-fp16",
+    "path": "models\\drone-yolo11x_openvino_model",
+    "artifact_sha256": {
+      "drone-yolo11x.bin": "d6d1a1af8676168561b061e5ff1b7ceada1aef9aa245e38ac851c0fc43ed845d",
+      "drone-yolo11x.xml": "3fc288c46b55f57129875a027a17e69f83b62b29b043943c0937b6b087ed1f44",
+      "metadata.yaml": "bb3d74f071eee52b84d1362be7cb4be39704579143e32c9e9b1a3b0284ac3695"
+    }
+  },
+  "test": {
+    "id": "pexels-drone-meadow-9404253-20f",
+    "source": "videos\\pexels-drone-meadow-9404253.mp4",
+    "source_sha256": "ca9cc6f7badc84ec90dd21b62c51435a5eff8598eefbe09cdda5d5a1f73402b4",
+    "max_frames": 20
+  },
+  "inference": {
+    "device": "intel:GPU",
+    "image_size": 640,
+    "confidence": 0.1,
+    "classes": [
+      "drone"
+    ],
+    "wall_seconds": 26.062252500036266
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "packages": {
+      "torch": "2.14.1",
+      "ultralytics": "8.4.174",
+      "openvino": "2026.4.1",
+      "opencv-python": "5.0.0.93",
+      "numpy": "2.4.6"
+    }
+  },
+  "metrics": {
+    "frames": 20,
+    "frames_with_detections": 20,
+    "total_detections": 20,
+    "first_frame_ms": 23571.12189999316,
+    "mean_inference_ms_including_startup": 1292.9666100098984,
+    "steady_mean_inference_ms": 120.43212106341105,
+    "steady_median_inference_ms": 116.97270005242899,
+    "steady_fps": 8.303432598961457
+  },
+  "limitations": [
+    "Detection counts are not accuracy metrics without ground-truth annotations.",
+    "Frames after the first are reported separately to reduce cold-start distortion.",
+    "Results are specific to the recorded model, media hash, settings, runtime, and device."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "tests": [
+    {
+      "id": "pexels-meadow-close-drone-v1",
+      "artifact": "videos/pexels-drone-meadow-9404253.mp4",
+      "sha256": "ca9cc6f7badc84ec90dd21b62c51435a5eff8598eefbe09cdda5d5a1f73402b4",
+      "source": "https://www.pexels.com/video/a-drone-flying-over-a-grassy-field-9404253/",
+      "licence": "Pexels Content License as displayed on source page",
+      "modality": "RGB",
+      "scenario": "close visible drone against sky and meadow",
+      "ground_truth": "not annotated",
+      "role": "functional smoke test, not an accuracy benchmark"
+    }
+  ]
+}

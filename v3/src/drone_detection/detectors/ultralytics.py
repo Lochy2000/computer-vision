@@ -29,8 +29,8 @@ class UltralyticsDetector(Detector):
             ) from exc
 
         weights_path = Path(weights)
-        if not weights_path.is_file():
-            raise FileNotFoundError(f"Model weights not found: {weights_path}")
+        if not weights_path.exists():
+            raise FileNotFoundError(f"Model weights or exported model not found: {weights_path}")
 
         self._model = YOLO(str(weights_path))
         self._weights = weights_path
@@ -43,7 +43,8 @@ class UltralyticsDetector(Detector):
 
     @property
     def name(self) -> str:
-        return f"ultralytics:{self._weights.name}"
+        backend = "openvino" if self._weights.is_dir() else "ultralytics"
+        return f"{backend}:{self._weights.name}"
 
     def predict(self, frame: np.ndarray) -> list[Detection]:
         kwargs: dict[str, Any] = {

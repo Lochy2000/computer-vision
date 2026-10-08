@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-10-07",
+  "datasets": [
+    {
+      "id": "ub-sod-figshare-33733090",
+      "title": "UB-SOD dataset for small UAV and bird detection in airport low-altitude surveillance",
+      "record_url": "https://doi.org/10.6084/m9.figshare.33733090",
+      "api_url": "https://api.figshare.com/v2/articles/33733090",
+      "license": "CC BY 4.0",
+      "classes": ["UAV", "Bird"],
+      "splits": {"train": 5765, "val": 641, "test": 712},
+      "instances": {"UAV": 10047, "Bird": 7995},
+      "files": [
+        {
+          "name": "UB-SOD_annotations.zip",
+          "size_bytes": 4515850,
+          "url": "https://ndownloader.figshare.com/files/68557186",
+          "sha256": "ff2257bcb7c60b41cac9f3c5e2e710e0b7bf8f2b4552147e2d1851cb0467b87d",
+          "local_status": "downloaded_and_verified"
+        },
+        {
+          "name": "UB-SOD_splits_and_metadata.zip",
+          "size_bytes": 932405,
+          "url": "https://ndownloader.figshare.com/files/68557198",
+          "sha256": "c16561b5510c45a53ec6e961aaa8647cc588782c5b6bf99d02eebf988735a71d",
+          "local_status": "downloaded_and_verified"
+        },
+        {
+          "name": "UB-SOD_images.zip",
+          "size_bytes": 2198608426,
+          "url": "https://ndownloader.figshare.com/files/68558218",
+          "sha256": "0248371904e49b4b5f8fde7276ae2e203c98d808f41354714bb675450e7ef7b8",
+          "local_status": "not_downloaded"
+        }
+      ],
+      "audit": {
+        "split_filename_overlap": 0,
+        "label_files": 7118,
+        "unexpected_class_lines": 0,
+        "visual_image_audit": "pending",
+        "approved_for_training": false
+      }
+    }
+  ]
+}

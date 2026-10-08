@@ -14,10 +14,12 @@ dependencies = [
 
 [project.optional-dependencies]
 ultralytics = ["ultralytics>=8.3"]
+edge = ["openvino>=2025.0,<2027"]
 dev = ["pytest>=8"]
 
 [project.scripts]
 drone-detect = "drone_detection.cli:main"
+drone-evalset = "drone_detection.evalset:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "third-party-yolo11x-drone-pytorch",
+      "architecture": "YOLO11x",
+      "task": "object-detection",
+      "classes": ["drone"],
+      "artifact": "models/drone-yolo11x.pt",
+      "sha256": "8762f0759ddab1cdcf5a39fe95ff8ef676e90d0f4406394ce75ff50bb25aca4a",
+      "source": "https://huggingface.co/doguilmak/Drone-Detection-YOLOv11x",
+      "commercial_status": "unresolved",
+      "licence_notes": "The model card says MIT, while Ultralytics export metadata says AGPL-3.0. Training-data provenance is not yet verified.",
+      "role": "POC accuracy baseline only"
+    },
+    {
+      "id": "third-party-yolo11x-drone-openvino-fp16",
+      "architecture": "YOLO11x",
+      "derived_from": "third-party-yolo11x-drone-pytorch",
+      "task": "object-detection",
+      "classes": ["drone"],
+      "artifact": "models/drone-yolo11x_openvino_model",
+      "files": {
+        "drone-yolo11x.bin": "d6d1a1af8676168561b061e5ff1b7ceada1aef9aa245e38ac851c0fc43ed845d",
+        "drone-yolo11x.xml": "3fc288c46b55f57129875a027a17e69f83b62b29b043943c0937b6b087ed1f44",
+        "metadata.yaml": "bb3d74f071eee52b84d1362be7cb4be39704579143e32c9e9b1a3b0284ac3695"
+      },
+      "commercial_status": "unresolved",
+      "role": "Intel edge-performance baseline only"
+    }
+  ]
+}
