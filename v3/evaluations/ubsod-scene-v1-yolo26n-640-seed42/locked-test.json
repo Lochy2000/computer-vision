@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-08T22:33:43.787123+00:00",
+  "evaluation_policy": {
+    "split": "test",
+    "purpose": "single locked-test evaluation after model selection",
+    "threshold_tuning_permitted": false
+  },
+  "model": {
+    "id": "ubsod-scene-v1-yolo26n-640-seed42",
+    "checkpoint": "C:\\Users\\User\\OneDrive\\Desktop\\Coding-practice\\python\\computer-vision\\v3\\runs\\colab-imports\\ubsod-scene-v1-yolo26n-640-seed42\\weights\\best.pt",
+    "checkpoint_sha256": "9dace11fb8f36b971a295de39b6a9bd5f20d3ba51a82defbfd615a89c0b559c5",
+    "training_artifact_sha256": {
+      "args.yaml": "235137fc659a919d1cd001209878c64247967291b0cd3d4ed1007c86cce09d35",
+      "results.csv": "76085945d081589e6fe86ce4e55f585883de389640fa6c47cdce6202943f6da6",
+      "preflight.json": "c2880652c1cbd6bb256a014654205b62206f7f8901967f7a41e7fcbef10716f9",
+      "dataset.generated.yaml": "1b1d46f55878157dca5729c19352072c0670830cb4b5baf2dbda6ac089a0f91d"
+    }
+  },
+  "dataset": {
+    "id": "ub-sod-scene-v1",
+    "root": "C:\\Users\\User\\OneDrive\\Desktop\\Coding-practice\\python\\computer-vision\\v3\\data\\UB-SOD-release\\verified-tar",
+    "classes": {
+      "0": "UAV",
+      "1": "Bird"
+    },
+    "split_counts": {
+      "train": 5367,
+      "val": 876,
+      "test": 875
+    },
+    "canonical_split_sha256": {
+      "train": "2e6100e2c3f9cd5019f45bd90b4090cc7bc5ee270ae97d020c21245c86832921",
+      "val": "c6215299af7eedc0baf70e394b64ce18519f0937be267a433568a1008465927a",
+      "test": "e931bf035b9e091b019ad3c0576fe36dd05e8d2be774939ce4e181c1a3445d92"
+    },
+    "evaluated_images": 875
+  },
+  "evaluation": {
+    "imgsz": 640,
+    "batch": 16,
+    "device": "cpu",
+    "artifacts_dir": "C:\\Users\\User\\OneDrive\\Desktop\\Coding-practice\\python\\computer-vision\\v3\\evaluations\\ubsod-scene-v1-yolo26n-640-seed42\\artifacts"
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "packages": {
+      "torch": "2.14.1",
+      "ultralytics": "8.4.174",
+      "numpy": "2.4.4"
+    }
+  },
+  "metrics": {
+    "overall": {
+      "precision": 0.8622303602149974,
+      "recall": 0.7565611881287171,
+      "map50": 0.8086020880342736,
+      "map50_95": 0.3853292904055777
+    },
+    "per_class": {
+      "UAV": {
+        "precision": 0.8733631970583303,
+        "recall": 0.6985507503392109,
+        "map50": 0.7859940373976786,
+        "map50_95": 0.38524519291387826
+      },
+      "Bird": {
+        "precision": 0.8510975233716644,
+        "recall": 0.8145716259182234,
+        "map50": 0.8312101386708686,
+        "map50_95": 0.3854133878972771
+      }
+    },
+    "speed_ms_per_image": {
+      "preprocess": 6.64391417141139,
+      "inference": 242.54103782851183,
+      "loss": 0.00017942857396389757,
+      "postprocess": 4.89800148572041
+    },
+    "ultralytics_results": {
+      "metrics/precision(B)": 0.8622303602149974,
+      "metrics/recall(B)": 0.7565611881287171,
+      "metrics/mAP50(B)": 0.8086020880342736,
+      "metrics/mAP50-95(B)": 0.3853292904055777,
+      "fitness": 0.3853292904055777
+    }
+  },
+  "limitations": [
+    "The split is grouped by inferred visual similarity because authoritative recording/session IDs are unavailable.",
+    "UB-SOD contains RGB airport-domain imagery and does not establish thermal performance.",
+    "Independent negative videos are still required to measure false drone alerts per hour."
+  ]
+}

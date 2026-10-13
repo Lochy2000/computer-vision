@@ -1,0 +1,7 @@
+path: "C:/Users/User/OneDrive/Desktop/Coding-practice/python/computer-vision/v3/data/UB-SOD-release/verified-tar"
+train: "C:/Users/User/OneDrive/Desktop/Coding-practice/python/computer-vision/v3/evaluations/ubsod-scene-v1-yolo26n-640-seed42/artifacts/train.resolved.txt"
+val: "C:/Users/User/OneDrive/Desktop/Coding-practice/python/computer-vision/v3/evaluations/ubsod-scene-v1-yolo26n-640-seed42/artifacts/val.resolved.txt"
+test: "C:/Users/User/OneDrive/Desktop/Coding-practice/python/computer-vision/v3/evaluations/ubsod-scene-v1-yolo26n-640-seed42/artifacts/test.resolved.txt"
+names:
+  0: UAV
+  1: Bird
