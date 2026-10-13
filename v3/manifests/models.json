@@ -27,6 +27,37 @@
       },
       "commercial_status": "unresolved",
       "role": "Intel edge-performance baseline only"
+    },
+    {
+      "id": "ubsod-scene-v1-yolo26n-640-seed42",
+      "architecture": "YOLO26n",
+      "task": "object-detection",
+      "classes": ["UAV", "Bird"],
+      "artifact": "runs/colab-imports/ubsod-scene-v1-yolo26n-640-seed42/weights/best.pt",
+      "sha256": "9dace11fb8f36b971a295de39b6a9bd5f20d3ba51a82defbfd615a89c0b559c5",
+      "training_dataset": "UB-SOD scene-v1",
+      "training_split_sha256": "2e6100e2c3f9cd5019f45bd90b4090cc7bc5ee270ae97d020c21245c86832921",
+      "validation_split_sha256": "c6215299af7eedc0baf70e394b64ce18519f0937be267a433568a1008465927a",
+      "selected_epoch": 81,
+      "validation_metrics": {
+        "precision": 0.863,
+        "recall": 0.710,
+        "mAP50": 0.797,
+        "mAP50-95": 0.372
+      },
+      "locked_test_record": "evaluations/ubsod-scene-v1-yolo26n-640-seed42/locked-test.json",
+      "locked_test_metrics": {
+        "precision": 0.8622303602149974,
+        "recall": 0.7565611881287171,
+        "mAP50": 0.8086020880342736,
+        "mAP50-95": 0.3853292904055777,
+        "UAV_mAP50": 0.7859940373976786,
+        "UAV_mAP50-95": 0.38524519291387826,
+        "Bird_mAP50": 0.8312101386708686,
+        "Bird_mAP50-95": 0.3854133878972771
+      },
+      "commercial_status": "AGPL-3.0 unless covered by an Ultralytics Enterprise licence",
+      "role": "Selected nano candidate; locked test complete, external-video evaluation pending"
     }
   ]
 }
