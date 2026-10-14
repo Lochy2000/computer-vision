@@ -2,7 +2,7 @@
 
 This is the staged, modular successor to the frozen `v3` detector baseline.
 
-## Current stage: 3.1-B
+## Current stage: 3.1-C
 
 This stage contains only:
 
@@ -12,6 +12,7 @@ This stage contains only:
 - unit tests for the contracts and interface.
 - a repeatable compatibility check between the frozen v3 detector and the v3.1
   adapter.
+- deterministic construction and JSON serialization of sensor observations.
 
 It does **not** contain tracking, event persistence, multi-node fusion, camera
 geometry, thermal fusion, perimeter alerts, or SAPIENT integration.
@@ -50,6 +51,11 @@ image + Frame -> Detector -> Detection -> SensorObservation
 The raw image is deliberately not stored inside `Frame` or
 `SensorObservation`. Images/video can be managed by a later evidence component
 without coupling all records to large pixel arrays.
+
+Observation construction is a pure operation: it copies frame context around
+each ordered detection and assigns a replay-stable event ID. It does not create
+a track. See `checkpoints/3.1-C-observation-construction.md` for the precise
+contract and acceptance checks.
 
 ## Development check
 
