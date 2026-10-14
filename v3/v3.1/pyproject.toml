@@ -13,6 +13,7 @@ dependencies = [
 
 [project.optional-dependencies]
 ultralytics = ["ultralytics>=8.4,<9"]
+verification = ["opencv-python>=4.8"]
 dev = ["pytest>=8"]
 
 [tool.setuptools.packages.find]

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-13T11:29:53.921775+00:00",
+  "purpose": "v3 to v3.1 detector-adapter compatibility checkpoint",
+  "result": "pass",
+  "comparison_policy": {
+    "ordered_outputs": true,
+    "absolute_tolerance": 1e-05,
+    "compared_fields": [
+      "count",
+      "class_id",
+      "class_name",
+      "confidence",
+      "bbox.x1",
+      "bbox.y1",
+      "bbox.x2",
+      "bbox.y2"
+    ],
+    "excluded": [
+      "adapter-specific model metadata",
+      "inference timing"
+    ]
+  },
+  "inputs": {
+    "source": "pexels-drone-meadow-9404253.mp4",
+    "source_sha256": "ca9cc6f7badc84ec90dd21b62c51435a5eff8598eefbe09cdda5d5a1f73402b4",
+    "weights": "best.pt",
+    "weights_sha256": "9dace11fb8f36b971a295de39b6a9bd5f20d3ba51a82defbfd615a89c0b559c5",
+    "frame_indices": [
+      0,
+      30,
+      60,
+      90,
+      120
+    ],
+    "image_size": 640,
+    "confidence": 0.1,
+    "device": "cpu",
+    "allowed_classes": [
+      "Bird",
+      "UAV"
+    ]
+  },
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "ultralytics": "8.4.174",
+    "opencv": "5.0.0"
+  },
+  "summary": {
+    "frames_compared": 5,
+    "frames_equivalent": 5,
+    "legacy_detections": 4,
+    "candidate_detections": 4
+  },
+  "frames": [
+    {
+      "frame_index": 0,
+      "width": 1920,
+      "height": 1080,
+      "legacy_detection_count": 0,
+      "candidate_detection_count": 0,
+      "equivalent": true,
+      "differences": []
+    },
+    {
+      "frame_index": 30,
+      "width": 1920,
+      "height": 1080,
+      "legacy_detection_count": 0,
+      "candidate_detection_count": 0,
+      "equivalent": true,
+      "differences": []
+    },
+    {
+      "frame_index": 60,
+      "width": 1920,
+      "height": 1080,
+      "legacy_detection_count": 0,
+      "candidate_detection_count": 0,
+      "equivalent": true,
+      "differences": []
+    },
+    {
+      "frame_index": 90,
+      "width": 1920,
+      "height": 1080,
+      "legacy_detection_count": 4,
+      "candidate_detection_count": 4,
+      "equivalent": true,
+      "differences": []
+    },
+    {
+      "frame_index": 120,
+      "width": 1920,
+      "height": 1080,
+      "legacy_detection_count": 0,
+      "candidate_detection_count": 0,
+      "equivalent": true,
+      "differences": []
+    }
+  ]
+}
