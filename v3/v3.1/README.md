@@ -2,7 +2,7 @@
 
 This is the staged, modular successor to the frozen `v3` detector baseline.
 
-## Current stage: 3.1-C
+## Current stage: 3.1-D
 
 This stage contains only:
 
@@ -13,6 +13,7 @@ This stage contains only:
 - a repeatable compatibility check between the frozen v3 detector and the v3.1
   adapter.
 - deterministic construction and JSON serialization of sensor observations.
+- a backend-neutral tracker interface and bounded local-track records.
 
 It does **not** contain tracking, event persistence, multi-node fusion, camera
 geometry, thermal fusion, perimeter alerts, or SAPIENT integration.
@@ -56,6 +57,10 @@ Observation construction is a pure operation: it copies frame context around
 each ordered detection and assigns a replay-stable event ID. It does not create
 a track. See `checkpoints/3.1-C-observation-construction.md` for the precise
 contract and acceptance checks.
+
+The tracking module currently defines only inputs, outputs, lifecycle states,
+validation, and replay reset. It contains no association algorithm. See
+`checkpoints/3.1-D-tracker-contract.md` for the boundary decisions.
 
 ## Development check
 
