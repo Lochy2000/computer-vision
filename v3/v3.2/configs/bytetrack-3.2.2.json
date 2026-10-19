@@ -1,0 +1,12 @@
+{
+  "tracker_id": "ultralytics-bytetrack:3.2.2-v1",
+  "track_high_threshold": 0.25,
+  "track_low_threshold": 0.1,
+  "new_track_threshold": 0.25,
+  "track_buffer_frames": 30,
+  "match_threshold": 0.8,
+  "fuse_score": true,
+  "minimum_confirmed_observations": 2,
+  "tracked_class_ids": [0]
+}
+

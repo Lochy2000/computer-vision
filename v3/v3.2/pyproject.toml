@@ -12,7 +12,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-ultralytics = ["ultralytics>=8.4,<9"]
+ultralytics = ["ultralytics==8.4.174"]
+tracking = ["ultralytics==8.4.174"]
 verification = ["opencv-python>=4.8"]
 dev = ["pytest>=8"]
 

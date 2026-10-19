@@ -7,7 +7,7 @@ One folder contains the complete v3.2 line. Incremental checkpoints are named
 `3.2.1`, `3.2.2`, `3.2.3`, and so on; they do not receive separate project
 folders.
 
-## Current checkpoint: 3.2.1
+## Current checkpoint: 3.2.2
 
 This checkpoint contains:
 
@@ -18,9 +18,16 @@ This checkpoint contains:
   and mismatched observations;
 - simple, explicitly defined single-target identity metrics;
 - a small synthetic detector-gap fixture and unit tests.
+- a pinned Ultralytics ByteTrack adapter behind the `Tracker` interface;
+- synthetic lifecycle checks covering tentative, lost, recovered, and reset
+  behaviour.
 
-It contains no ByteTrack, BoT-SORT, production tracking algorithm, video
+It contains no BoT-SORT comparison, recorded-video tracking evaluation, video
 pipeline, event database, thermal processing, fusion, or alerting.
+
+The 3.2.2 baseline tracks only class ID `0` (`UAV`) and uses the configuration
+in `configs/bytetrack-3.2.2.json`. It consumes the saved observation contract;
+it does not call Ultralytics' combined detector/tracker pipeline.
 
 ## Evaluation flow
 
