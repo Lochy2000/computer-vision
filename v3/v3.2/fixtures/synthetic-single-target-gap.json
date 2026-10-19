@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "fixture_id": "synthetic-single-target-gap-v1",
+  "source_id": "synthetic:test-sequence",
+  "sensor_id": "north-camera",
+  "frames": [
+    {
+      "frame": {
+        "frame_id": "000000",
+        "sensor_id": "north-camera",
+        "sequence_number": 0,
+        "captured_at": "2026-10-19T12:00:00+00:00",
+        "width": 640,
+        "height": 480,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "north-camera:000000:observation:0000",
+          "frame_id": "000000",
+          "sensor_id": "north-camera",
+          "captured_at": "2026-10-19T12:00:00+00:00",
+          "detection": {
+            "bbox": {"x1": 100, "y1": 200, "x2": 130, "y2": 225},
+            "confidence": 0.8,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "synthetic:detector",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "000001",
+        "sensor_id": "north-camera",
+        "sequence_number": 1,
+        "captured_at": "2026-10-19T12:00:00.040000+00:00",
+        "width": 640,
+        "height": 480,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "000002",
+        "sensor_id": "north-camera",
+        "sequence_number": 2,
+        "captured_at": "2026-10-19T12:00:00.080000+00:00",
+        "width": 640,
+        "height": 480,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "north-camera:000002:observation:0000",
+          "frame_id": "000002",
+          "sensor_id": "north-camera",
+          "captured_at": "2026-10-19T12:00:00.080000+00:00",
+          "detection": {
+            "bbox": {"x1": 108, "y1": 201, "x2": 138, "y2": 226},
+            "confidence": 0.72,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "synthetic:detector",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    }
+  ]
+}
+
