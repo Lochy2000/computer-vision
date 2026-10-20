@@ -11,6 +11,11 @@ from counter_uas.evaluation.metrics import (
     TargetFrameAssignment,
     calculate_identity_metrics,
 )
+from counter_uas.evaluation.recorded import (
+    sha256_file,
+    summarize_observations,
+    summarize_replay,
+)
 
 __all__ = [
     "FrameObservations",
@@ -20,5 +25,8 @@ __all__ = [
     "calculate_identity_metrics",
     "load_observation_sequence",
     "save_observation_sequence",
+    "sha256_file",
+    "summarize_observations",
+    "summarize_replay",
 ]
 

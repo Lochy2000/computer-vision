@@ -1,0 +1,42 @@
+{
+  "checkpoint": "3.2.3",
+  "created_at_utc": "2026-10-19T14:27:35.740434+00:00",
+  "fixture": "fixtures\\recorded\\pexels-meadow-0060-0120.observations.json",
+  "fixture_sha256": "0f5c170b3d28cf11aa3a6dd0e22de3060e8905dfc4a0d0dafe0340512316f4ce",
+  "source": "..\\videos\\pexels-drone-meadow-9404253.mp4",
+  "source_sha256": "ca9cc6f7badc84ec90dd21b62c51435a5eff8598eefbe09cdda5d5a1f73402b4",
+  "weights": "..\\runs\\colab-imports\\ubsod-scene-v1-yolo26n-640-seed42\\weights\\best.pt",
+  "weights_sha256": "9dace11fb8f36b971a295de39b6a9bd5f20d3ba51a82defbfd615a89c0b559c5",
+  "model_id": "ultralytics:best.pt",
+  "video": {
+    "fps": 29.97002997002997,
+    "width": 1920,
+    "height": 1080,
+    "total_frames": 178
+  },
+  "window": {
+    "start_frame": 60,
+    "end_frame": 120,
+    "inclusive": true
+  },
+  "inference": {
+    "image_size": 640,
+    "confidence": 0.1,
+    "device": "cpu",
+    "allowed_classes": [
+      "UAV",
+      "Bird"
+    ]
+  },
+  "timestamp_basis": "relative video position anchored to Unix epoch; not the real-world capture time",
+  "elapsed_seconds": 17.945123500016052,
+  "summary": {
+    "frame_count": 61,
+    "frames_with_observations": 40,
+    "empty_frame_count": 21,
+    "observation_count": 82,
+    "class_counts": {
+      "UAV": 82
+    }
+  }
+}

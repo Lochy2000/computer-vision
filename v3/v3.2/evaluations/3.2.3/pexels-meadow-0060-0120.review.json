@@ -1,0 +1,24 @@
+{
+  "checkpoint": "3.2.3",
+  "review_type": "manual qualitative target-level review",
+  "source_frame_range": {
+    "start": 60,
+    "end": 120,
+    "inclusive": true
+  },
+  "target_visibility": {
+    "visible_frames": 61,
+    "occluded_frames": 0,
+    "description": "One large multirotor UAV is plainly visible throughout the selected window."
+  },
+  "acceptance_rule": "A target-level detection must localize the aircraft as one object, rather than a small component or unrelated background patch.",
+  "finding": {
+    "accepted_target_level_detections": 0,
+    "reason": "Review of the frozen boxes found small boxes on aircraft details and background vegetation, but no box localizing the complete UAV."
+  },
+  "limits": [
+    "No pixel-accurate ground-truth bounding boxes were created in this checkpoint.",
+    "This review supports a qualitative failure finding, not a dataset-level precision, recall, mAP, HOTA, or MOTA claim.",
+    "The clip is a close-range positive case and does not represent long-range or negative-scene performance."
+  ]
+}

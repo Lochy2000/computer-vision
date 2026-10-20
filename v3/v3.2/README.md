@@ -7,7 +7,7 @@ One folder contains the complete v3.2 line. Incremental checkpoints are named
 `3.2.1`, `3.2.2`, `3.2.3`, and so on; they do not receive separate project
 folders.
 
-## Current checkpoint: 3.2.2
+## Current checkpoint: 3.2.3
 
 This checkpoint contains:
 
@@ -21,13 +21,21 @@ This checkpoint contains:
 - a pinned Ultralytics ByteTrack adapter behind the `Tracker` interface;
 - synthetic lifecycle checks covering tentative, lost, recovered, and reset
   behaviour.
+- a frozen 61-frame recorded-video observation fixture;
+- a hash-bound detector manifest, ByteTrack replay, manual review, and visual
+  observation overlay.
 
-It contains no BoT-SORT comparison, recorded-video tracking evaluation, video
-pipeline, event database, thermal processing, fusion, or alerting.
+It contains no BoT-SORT comparison, live video pipeline, event database,
+thermal processing, fusion, or alerting.
 
 The 3.2.2 baseline tracks only class ID `0` (`UAV`) and uses the configuration
 in `configs/bytetrack-3.2.2.json`. It consumes the saved observation contract;
 it does not call Ultralytics' combined detector/tracker pipeline.
+
+The first controlled real-video case is deliberately retained as a failed
+baseline. The visible drone received fragmented component/background boxes and
+ByteTrack produced no track. See
+`checkpoints/3.2.3-recorded-video-evaluation.md` before changing thresholds.
 
 ## Evaluation flow
 

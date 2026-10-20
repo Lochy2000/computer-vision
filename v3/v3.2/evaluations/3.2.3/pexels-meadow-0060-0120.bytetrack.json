@@ -1,0 +1,513 @@
+{
+  "checkpoint": "3.2.3",
+  "created_at_utc": "2026-10-19T14:27:43.389005+00:00",
+  "fixture": "fixtures\\recorded\\pexels-meadow-0060-0120.observations.json",
+  "fixture_sha256": "0f5c170b3d28cf11aa3a6dd0e22de3060e8905dfc4a0d0dafe0340512316f4ce",
+  "config": "configs\\bytetrack-3.2.2.json",
+  "config_sha256": "d54f1667f2b2334e33a9ccfd1fcd81ecf4b9846fc2b590a5e84bf9298f380769",
+  "tracker_id": "ultralytics-bytetrack:3.2.2-v1",
+  "summary": {
+    "frame_count": 61,
+    "frames_with_observations": 40,
+    "empty_frame_count": 21,
+    "observation_count": 82,
+    "class_counts": {
+      "UAV": 82
+    },
+    "frames_with_any_track": 0,
+    "frames_with_confirmed_track": 0,
+    "unique_reported_track_ids": [],
+    "confirmed_track_ids": []
+  },
+  "frames": [
+    {
+      "frame_id": "source-frame-000060",
+      "sequence_number": 60,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000061",
+      "sequence_number": 61,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000061:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000062",
+      "sequence_number": 62,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000063",
+      "sequence_number": 63,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000064",
+      "sequence_number": 64,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000064:observation:0000",
+        "recorded-camera-01:source-frame-000064:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000065",
+      "sequence_number": 65,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000065:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000066",
+      "sequence_number": 66,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000067",
+      "sequence_number": 67,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000068",
+      "sequence_number": 68,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000068:observation:0000",
+        "recorded-camera-01:source-frame-000068:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000069",
+      "sequence_number": 69,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000070",
+      "sequence_number": 70,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000070:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000071",
+      "sequence_number": 71,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000071:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000072",
+      "sequence_number": 72,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000072:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000073",
+      "sequence_number": 73,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000074",
+      "sequence_number": 74,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000074:observation:0000",
+        "recorded-camera-01:source-frame-000074:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000075",
+      "sequence_number": 75,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000075:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000076",
+      "sequence_number": 76,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000077",
+      "sequence_number": 77,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000078",
+      "sequence_number": 78,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000079",
+      "sequence_number": 79,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000080",
+      "sequence_number": 80,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000080:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000081",
+      "sequence_number": 81,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000081:observation:0000",
+        "recorded-camera-01:source-frame-000081:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000082",
+      "sequence_number": 82,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000083",
+      "sequence_number": 83,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000083:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000084",
+      "sequence_number": 84,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000085",
+      "sequence_number": 85,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000086",
+      "sequence_number": 86,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000087",
+      "sequence_number": 87,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000088",
+      "sequence_number": 88,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000088:observation:0000",
+        "recorded-camera-01:source-frame-000088:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000089",
+      "sequence_number": 89,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000089:observation:0000",
+        "recorded-camera-01:source-frame-000089:observation:0001",
+        "recorded-camera-01:source-frame-000089:observation:0002"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000090",
+      "sequence_number": 90,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000090:observation:0000",
+        "recorded-camera-01:source-frame-000090:observation:0001",
+        "recorded-camera-01:source-frame-000090:observation:0002",
+        "recorded-camera-01:source-frame-000090:observation:0003"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000091",
+      "sequence_number": 91,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000091:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000092",
+      "sequence_number": 92,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000092:observation:0000",
+        "recorded-camera-01:source-frame-000092:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000093",
+      "sequence_number": 93,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000094",
+      "sequence_number": 94,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000094:observation:0000",
+        "recorded-camera-01:source-frame-000094:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000095",
+      "sequence_number": 95,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000095:observation:0000",
+        "recorded-camera-01:source-frame-000095:observation:0001",
+        "recorded-camera-01:source-frame-000095:observation:0002",
+        "recorded-camera-01:source-frame-000095:observation:0003"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000096",
+      "sequence_number": 96,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000096:observation:0000",
+        "recorded-camera-01:source-frame-000096:observation:0001",
+        "recorded-camera-01:source-frame-000096:observation:0002"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000097",
+      "sequence_number": 97,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000097:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000098",
+      "sequence_number": 98,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000099",
+      "sequence_number": 99,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000100",
+      "sequence_number": 100,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000100:observation:0000",
+        "recorded-camera-01:source-frame-000100:observation:0001",
+        "recorded-camera-01:source-frame-000100:observation:0002"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000101",
+      "sequence_number": 101,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000101:observation:0000",
+        "recorded-camera-01:source-frame-000101:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000102",
+      "sequence_number": 102,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000102:observation:0000",
+        "recorded-camera-01:source-frame-000102:observation:0001",
+        "recorded-camera-01:source-frame-000102:observation:0002"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000103",
+      "sequence_number": 103,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000103:observation:0000",
+        "recorded-camera-01:source-frame-000103:observation:0001",
+        "recorded-camera-01:source-frame-000103:observation:0002",
+        "recorded-camera-01:source-frame-000103:observation:0003"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000104",
+      "sequence_number": 104,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000104:observation:0000",
+        "recorded-camera-01:source-frame-000104:observation:0001",
+        "recorded-camera-01:source-frame-000104:observation:0002"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000105",
+      "sequence_number": 105,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000105:observation:0000",
+        "recorded-camera-01:source-frame-000105:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000106",
+      "sequence_number": 106,
+      "observation_ids": [],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000107",
+      "sequence_number": 107,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000107:observation:0000",
+        "recorded-camera-01:source-frame-000107:observation:0001",
+        "recorded-camera-01:source-frame-000107:observation:0002"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000108",
+      "sequence_number": 108,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000108:observation:0000",
+        "recorded-camera-01:source-frame-000108:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000109",
+      "sequence_number": 109,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000109:observation:0000",
+        "recorded-camera-01:source-frame-000109:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000110",
+      "sequence_number": 110,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000110:observation:0000",
+        "recorded-camera-01:source-frame-000110:observation:0001",
+        "recorded-camera-01:source-frame-000110:observation:0002",
+        "recorded-camera-01:source-frame-000110:observation:0003"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000111",
+      "sequence_number": 111,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000111:observation:0000",
+        "recorded-camera-01:source-frame-000111:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000112",
+      "sequence_number": 112,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000112:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000113",
+      "sequence_number": 113,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000113:observation:0000",
+        "recorded-camera-01:source-frame-000113:observation:0001",
+        "recorded-camera-01:source-frame-000113:observation:0002",
+        "recorded-camera-01:source-frame-000113:observation:0003"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000114",
+      "sequence_number": 114,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000114:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000115",
+      "sequence_number": 115,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000115:observation:0000",
+        "recorded-camera-01:source-frame-000115:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000116",
+      "sequence_number": 116,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000116:observation:0000",
+        "recorded-camera-01:source-frame-000116:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000117",
+      "sequence_number": 117,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000117:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000118",
+      "sequence_number": 118,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000118:observation:0000",
+        "recorded-camera-01:source-frame-000118:observation:0001"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000119",
+      "sequence_number": 119,
+      "observation_ids": [
+        "recorded-camera-01:source-frame-000119:observation:0000"
+      ],
+      "tracks": []
+    },
+    {
+      "frame_id": "source-frame-000120",
+      "sequence_number": 120,
+      "observation_ids": [],
+      "tracks": []
+    }
+  ],
+  "interpretation_limit": "Descriptive replay only. Track presence is not ground-truth target matching."
+}

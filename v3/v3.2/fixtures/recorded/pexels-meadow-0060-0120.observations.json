@@ -1,0 +1,2584 @@
+{
+  "schema_version": 1,
+  "fixture_id": "pexels-meadow-frames-0060-0120",
+  "source_id": "pexels-drone-meadow-9404253",
+  "sensor_id": "recorded-camera-01",
+  "frames": [
+    {
+      "frame": {
+        "frame_id": "source-frame-000060",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 60,
+        "captured_at": "1970-01-01T00:00:02.002000+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000061",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 61,
+        "captured_at": "1970-01-01T00:00:02.035367+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000061:observation:0000",
+          "frame_id": "source-frame-000061",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.035367+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1358.6004638671875,
+              "y1": 874.6803588867188,
+              "x2": 1397.215576171875,
+              "y2": 922.2593994140625
+            },
+            "confidence": 0.17186392843723297,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000062",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 62,
+        "captured_at": "1970-01-01T00:00:02.068733+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000063",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 63,
+        "captured_at": "1970-01-01T00:00:02.102100+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000064",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 64,
+        "captured_at": "1970-01-01T00:00:02.135467+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000064:observation:0000",
+          "frame_id": "source-frame-000064",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.135467+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1526.99169921875,
+              "y1": 539.2648315429688,
+              "x2": 1551.2183837890625,
+              "y2": 595.0117797851562
+            },
+            "confidence": 0.12372420728206635,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000064:observation:0001",
+          "frame_id": "source-frame-000064",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.135467+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 343.828857421875,
+              "y1": 993.5672607421875,
+              "x2": 370.1205139160156,
+              "y2": 1032.8426513671875
+            },
+            "confidence": 0.12059761583805084,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000065",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 65,
+        "captured_at": "1970-01-01T00:00:02.168833+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000065:observation:0000",
+          "frame_id": "source-frame-000065",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.168833+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1524.8829345703125,
+              "y1": 537.0503540039062,
+              "x2": 1552.714599609375,
+              "y2": 592.020263671875
+            },
+            "confidence": 0.2817671298980713,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000066",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 66,
+        "captured_at": "1970-01-01T00:00:02.202200+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000067",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 67,
+        "captured_at": "1970-01-01T00:00:02.235567+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000068",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 68,
+        "captured_at": "1970-01-01T00:00:02.268933+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000068:observation:0000",
+          "frame_id": "source-frame-000068",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.268933+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1355.7078857421875,
+              "y1": 782.5551147460938,
+              "x2": 1388.859375,
+              "y2": 828.0524291992188
+            },
+            "confidence": 0.4137434959411621,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000068:observation:0001",
+          "frame_id": "source-frame-000068",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.268933+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1530.9423828125,
+              "y1": 524.3818359375,
+              "x2": 1553.375,
+              "y2": 576.0181274414062
+            },
+            "confidence": 0.18592683970928192,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000069",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 69,
+        "captured_at": "1970-01-01T00:00:02.302300+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000070",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 70,
+        "captured_at": "1970-01-01T00:00:02.335667+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000070:observation:0000",
+          "frame_id": "source-frame-000070",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.335667+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1356.243896484375,
+              "y1": 758.361328125,
+              "x2": 1390.3890380859375,
+              "y2": 800.5693359375
+            },
+            "confidence": 0.32596835494041443,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000071",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 71,
+        "captured_at": "1970-01-01T00:00:02.369033+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000071:observation:0000",
+          "frame_id": "source-frame-000071",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.369033+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1012.0921020507812,
+              "y1": 777.8060302734375,
+              "x2": 1048.5584716796875,
+              "y2": 843.4361572265625
+            },
+            "confidence": 0.10221382975578308,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000072",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 72,
+        "captured_at": "1970-01-01T00:00:02.402400+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000072:observation:0000",
+          "frame_id": "source-frame-000072",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.402400+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1353.7584228515625,
+              "y1": 728.6001586914062,
+              "x2": 1390.291259765625,
+              "y2": 772.0921020507812
+            },
+            "confidence": 0.1000014990568161,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000073",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 73,
+        "captured_at": "1970-01-01T00:00:02.435767+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000074",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 74,
+        "captured_at": "1970-01-01T00:00:02.469133+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000074:observation:0000",
+          "frame_id": "source-frame-000074",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.469133+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1013.318115234375,
+              "y1": 734.461181640625,
+              "x2": 1046.309326171875,
+              "y2": 795.9344482421875
+            },
+            "confidence": 0.2513478994369507,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000074:observation:0001",
+          "frame_id": "source-frame-000074",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.469133+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 356.0359802246094,
+              "y1": 852.3902587890625,
+              "x2": 373.9743347167969,
+              "y2": 880.6557006835938
+            },
+            "confidence": 0.10252923518419266,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000075",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 75,
+        "captured_at": "1970-01-01T00:00:02.502500+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000075:observation:0000",
+          "frame_id": "source-frame-000075",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.502500+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1353.526611328125,
+              "y1": 682.7576293945312,
+              "x2": 1387.15625,
+              "y2": 724.6419067382812
+            },
+            "confidence": 0.18911221623420715,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000076",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 76,
+        "captured_at": "1970-01-01T00:00:02.535867+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000077",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 77,
+        "captured_at": "1970-01-01T00:00:02.569233+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000078",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 78,
+        "captured_at": "1970-01-01T00:00:02.602600+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000079",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 79,
+        "captured_at": "1970-01-01T00:00:02.635967+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000080",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 80,
+        "captured_at": "1970-01-01T00:00:02.669333+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000080:observation:0000",
+          "frame_id": "source-frame-000080",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.669333+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 286.0649719238281,
+              "y1": 818.0956420898438,
+              "x2": 314.1399841308594,
+              "y2": 863.1004028320312
+            },
+            "confidence": 0.11950202286243439,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000081",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 81,
+        "captured_at": "1970-01-01T00:00:02.702700+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000081:observation:0000",
+          "frame_id": "source-frame-000081",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.702700+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 355.659423828125,
+              "y1": 726.9603881835938,
+              "x2": 375.98760986328125,
+              "y2": 758.90771484375
+            },
+            "confidence": 0.20389863848686218,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000081:observation:0001",
+          "frame_id": "source-frame-000081",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.702700+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1286.58154296875,
+              "y1": 765.1810913085938,
+              "x2": 1311.41015625,
+              "y2": 799.4009399414062
+            },
+            "confidence": 0.1017487570643425,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000082",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 82,
+        "captured_at": "1970-01-01T00:00:02.736067+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000083",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 83,
+        "captured_at": "1970-01-01T00:00:02.769433+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000083:observation:0000",
+          "frame_id": "source-frame-000083",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.769433+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 425.0888671875,
+              "y1": 1016.2402954101562,
+              "x2": 450.4072265625,
+              "y2": 1063.1866455078125
+            },
+            "confidence": 0.1097877249121666,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000084",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 84,
+        "captured_at": "1970-01-01T00:00:02.802800+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000085",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 85,
+        "captured_at": "1970-01-01T00:00:02.836167+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000086",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 86,
+        "captured_at": "1970-01-01T00:00:02.869533+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000087",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 87,
+        "captured_at": "1970-01-01T00:00:02.902900+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000088",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 88,
+        "captured_at": "1970-01-01T00:00:02.936267+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000088:observation:0000",
+          "frame_id": "source-frame-000088",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.936267+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 284.2353210449219,
+              "y1": 710.1009521484375,
+              "x2": 313.271728515625,
+              "y2": 748.2349243164062
+            },
+            "confidence": 0.1993248164653778,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000088:observation:0001",
+          "frame_id": "source-frame-000088",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.936267+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1146.83349609375,
+              "y1": 841.22998046875,
+              "x2": 1166.224365234375,
+              "y2": 869.1350708007812
+            },
+            "confidence": 0.12410122156143188,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000089",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 89,
+        "captured_at": "1970-01-01T00:00:02.969633+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000089:observation:0000",
+          "frame_id": "source-frame-000089",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.969633+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 916.5862426757812,
+              "y1": 873.2048950195312,
+              "x2": 943.1292114257812,
+              "y2": 913.5574951171875
+            },
+            "confidence": 0.16754955053329468,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000089:observation:0001",
+          "frame_id": "source-frame-000089",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.969633+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 787.8821411132812,
+              "y1": 824.8715209960938,
+              "x2": 810.9893188476562,
+              "y2": 861.6848754882812
+            },
+            "confidence": 0.13504576683044434,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000089:observation:0002",
+          "frame_id": "source-frame-000089",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:02.969633+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1672.248779296875,
+              "y1": 22.80036163330078,
+              "x2": 1747.235595703125,
+              "y2": 99.04781341552734
+            },
+            "confidence": 0.1313706785440445,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000090",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 90,
+        "captured_at": "1970-01-01T00:00:03.003000+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000090:observation:0000",
+          "frame_id": "source-frame-000090",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.003000+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 837.7181396484375,
+              "y1": 598.4815063476562,
+              "x2": 868.364501953125,
+              "y2": 672.1349487304688
+            },
+            "confidence": 0.22664861381053925,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000090:observation:0001",
+          "frame_id": "source-frame-000090",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.003000+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1142.9879150390625,
+              "y1": 818.4298095703125,
+              "x2": 1166.4737548828125,
+              "y2": 849.163330078125
+            },
+            "confidence": 0.1916416436433792,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000090:observation:0002",
+          "frame_id": "source-frame-000090",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.003000+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1140.3426513671875,
+              "y1": 813.7505493164062,
+              "x2": 1171.4815673828125,
+              "y2": 854.65869140625
+            },
+            "confidence": 0.1133233904838562,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000090:observation:0003",
+          "frame_id": "source-frame-000090",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.003000+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1663.86767578125,
+              "y1": 2.683238983154297,
+              "x2": 1749.94921875,
+              "y2": 87.88863372802734
+            },
+            "confidence": 0.10202369093894958,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000091",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 91,
+        "captured_at": "1970-01-01T00:00:03.036367+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000091:observation:0000",
+          "frame_id": "source-frame-000091",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.036367+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1673.6510009765625,
+              "y1": 0.0,
+              "x2": 1749.0479736328125,
+              "y2": 76.6816177368164
+            },
+            "confidence": 0.28364941477775574,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000092",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 92,
+        "captured_at": "1970-01-01T00:00:03.069733+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000092:observation:0000",
+          "frame_id": "source-frame-000092",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.069733+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 281.6839904785156,
+              "y1": 666.989501953125,
+              "x2": 310.28973388671875,
+              "y2": 706.3978271484375
+            },
+            "confidence": 0.16479717195034027,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000092:observation:0001",
+          "frame_id": "source-frame-000092",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.069733+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 783.281494140625,
+              "y1": 795.157470703125,
+              "x2": 810.7716674804688,
+              "y2": 829.34326171875
+            },
+            "confidence": 0.12725920975208282,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000093",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 93,
+        "captured_at": "1970-01-01T00:00:03.103100+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000094",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 94,
+        "captured_at": "1970-01-01T00:00:03.136467+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000094:observation:0000",
+          "frame_id": "source-frame-000094",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.136467+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 566.0635986328125,
+              "y1": 452.6107177734375,
+              "x2": 594.2371215820312,
+              "y2": 510.66961669921875
+            },
+            "confidence": 0.25244244933128357,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000094:observation:0001",
+          "frame_id": "source-frame-000094",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.136467+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 474.362548828125,
+              "y1": 684.5869750976562,
+              "x2": 497.50433349609375,
+              "y2": 722.8917846679688
+            },
+            "confidence": 0.24566085636615753,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000095",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 95,
+        "captured_at": "1970-01-01T00:00:03.169833+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000095:observation:0000",
+          "frame_id": "source-frame-000095",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.169833+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 830.4407958984375,
+              "y1": 557.0028686523438,
+              "x2": 866.063232421875,
+              "y2": 623.9883422851562
+            },
+            "confidence": 0.21765045821666718,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000095:observation:0001",
+          "frame_id": "source-frame-000095",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.169833+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1076.6031494140625,
+              "y1": 670.7048950195312,
+              "x2": 1101.069580078125,
+              "y2": 724.4432983398438
+            },
+            "confidence": 0.16513709723949432,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000095:observation:0002",
+          "frame_id": "source-frame-000095",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.169833+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 280.44482421875,
+              "y1": 640.179443359375,
+              "x2": 305.5899658203125,
+              "y2": 679.09228515625
+            },
+            "confidence": 0.10751917213201523,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000095:observation:0003",
+          "frame_id": "source-frame-000095",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.169833+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1691.67333984375,
+              "y1": 0.0,
+              "x2": 1726.204833984375,
+              "y2": 39.53860855102539
+            },
+            "confidence": 0.1051851361989975,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000096",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 96,
+        "captured_at": "1970-01-01T00:00:03.203200+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000096:observation:0000",
+          "frame_id": "source-frame-000096",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.203200+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1134.145751953125,
+              "y1": 764.7218627929688,
+              "x2": 1162.8123779296875,
+              "y2": 801.7359008789062
+            },
+            "confidence": 0.2143469750881195,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000096:observation:0001",
+          "frame_id": "source-frame-000096",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.203200+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 669.2084350585938,
+              "y1": 777.4718627929688,
+              "x2": 688.4498901367188,
+              "y2": 806.5490112304688
+            },
+            "confidence": 0.1403244584798813,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000096:observation:0002",
+          "frame_id": "source-frame-000096",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.203200+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 663.44384765625,
+              "y1": 770.8546752929688,
+              "x2": 693.4661865234375,
+              "y2": 815.20849609375
+            },
+            "confidence": 0.11642488092184067,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000097",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 97,
+        "captured_at": "1970-01-01T00:00:03.236567+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000097:observation:0000",
+          "frame_id": "source-frame-000097",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.236567+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1074.0235595703125,
+              "y1": 656.4488525390625,
+              "x2": 1103.7646484375,
+              "y2": 716.3040161132812
+            },
+            "confidence": 0.11683574318885803,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000098",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 98,
+        "captured_at": "1970-01-01T00:00:03.269933+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000099",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 99,
+        "captured_at": "1970-01-01T00:00:03.303300+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000100",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 100,
+        "captured_at": "1970-01-01T00:00:03.336667+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000100:observation:0000",
+          "frame_id": "source-frame-000100",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.336667+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 906.1175537109375,
+              "y1": 777.5537109375,
+              "x2": 935.9501953125,
+              "y2": 819.9583740234375
+            },
+            "confidence": 0.18791481852531433,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000100:observation:0001",
+          "frame_id": "source-frame-000100",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.336667+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 776.4873046875,
+              "y1": 732.5352783203125,
+              "x2": 802.764404296875,
+              "y2": 768.6865234375
+            },
+            "confidence": 0.1297844499349594,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000100:observation:0002",
+          "frame_id": "source-frame-000100",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.336667+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1480.4996337890625,
+              "y1": 417.3705139160156,
+              "x2": 1501.99365234375,
+              "y2": 465.8458557128906
+            },
+            "confidence": 0.12657330930233002,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000101",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 101,
+        "captured_at": "1970-01-01T00:00:03.370033+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000101:observation:0000",
+          "frame_id": "source-frame-000101",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.370033+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 906.7371826171875,
+              "y1": 767.2093505859375,
+              "x2": 932.6671142578125,
+              "y2": 809.6705932617188
+            },
+            "confidence": 0.2824765741825104,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000101:observation:0001",
+          "frame_id": "source-frame-000101",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.370033+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1475.4039306640625,
+              "y1": 421.5078125,
+              "x2": 1500.6695556640625,
+              "y2": 471.1628112792969
+            },
+            "confidence": 0.2714037597179413,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000102",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 102,
+        "captured_at": "1970-01-01T00:00:03.403400+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000102:observation:0000",
+          "frame_id": "source-frame-000102",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.403400+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 906.77783203125,
+              "y1": 764.3739624023438,
+              "x2": 933.24755859375,
+              "y2": 803.607421875
+            },
+            "confidence": 0.37454861402511597,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000102:observation:0001",
+          "frame_id": "source-frame-000102",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.403400+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 283.08953857421875,
+              "y1": 1008.9730224609375,
+              "x2": 305.1825256347656,
+              "y2": 1049.11669921875
+            },
+            "confidence": 0.19033367931842804,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000102:observation:0002",
+          "frame_id": "source-frame-000102",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.403400+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 280.3123474121094,
+              "y1": 1002.2124633789062,
+              "x2": 307.61749267578125,
+              "y2": 1052.7783203125
+            },
+            "confidence": 0.13367734849452972,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000103",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 103,
+        "captured_at": "1970-01-01T00:00:03.436767+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000103:observation:0000",
+          "frame_id": "source-frame-000103",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.436767+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 907.546142578125,
+              "y1": 759.3316040039062,
+              "x2": 930.9613037109375,
+              "y2": 795.333251953125
+            },
+            "confidence": 0.18911711871623993,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000103:observation:0001",
+          "frame_id": "source-frame-000103",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.436767+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1471.4622802734375,
+              "y1": 422.6477966308594,
+              "x2": 1492.1400146484375,
+              "y2": 475.7174377441406
+            },
+            "confidence": 0.13559964299201965,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000103:observation:0002",
+          "frame_id": "source-frame-000103",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.436767+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 901.1363525390625,
+              "y1": 749.7548217773438,
+              "x2": 930.324462890625,
+              "y2": 796.0541381835938
+            },
+            "confidence": 0.12946800887584686,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000103:observation:0003",
+          "frame_id": "source-frame-000103",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.436767+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 506.964111328125,
+              "y1": 769.7759399414062,
+              "x2": 534.670166015625,
+              "y2": 808.0493774414062
+            },
+            "confidence": 0.11078131198883057,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000104",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 104,
+        "captured_at": "1970-01-01T00:00:03.470133+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000104:observation:0000",
+          "frame_id": "source-frame-000104",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.470133+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1466.9964599609375,
+              "y1": 423.7673034667969,
+              "x2": 1489.820556640625,
+              "y2": 475.7054443359375
+            },
+            "confidence": 0.41737690567970276,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000104:observation:0001",
+          "frame_id": "source-frame-000104",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.470133+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 904.3258666992188,
+              "y1": 750.1832885742188,
+              "x2": 931.1618041992188,
+              "y2": 795.5894165039062
+            },
+            "confidence": 0.22194890677928925,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000104:observation:0002",
+          "frame_id": "source-frame-000104",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.470133+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 505.8974304199219,
+              "y1": 759.2865600585938,
+              "x2": 535.8929443359375,
+              "y2": 804.7307739257812
+            },
+            "confidence": 0.1818239986896515,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000105",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 105,
+        "captured_at": "1970-01-01T00:00:03.503500+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000105:observation:0000",
+          "frame_id": "source-frame-000105",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.503500+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 503.51165771484375,
+              "y1": 751.0625610351562,
+              "x2": 536.12548828125,
+              "y2": 804.6469116210938
+            },
+            "confidence": 0.1564728021621704,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000105:observation:0001",
+          "frame_id": "source-frame-000105",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.503500+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 905.8363037109375,
+              "y1": 744.48046875,
+              "x2": 928.4615478515625,
+              "y2": 781.96435546875
+            },
+            "confidence": 0.127959743142128,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000106",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 106,
+        "captured_at": "1970-01-01T00:00:03.536867+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000107",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 107,
+        "captured_at": "1970-01-01T00:00:03.570233+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000107:observation:0000",
+          "frame_id": "source-frame-000107",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.570233+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 505.7457275390625,
+              "y1": 733.4501953125,
+              "x2": 533.178955078125,
+              "y2": 785.3961181640625
+            },
+            "confidence": 0.22579525411128998,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000107:observation:0001",
+          "frame_id": "source-frame-000107",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.570233+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 901.2599487304688,
+              "y1": 731.8654174804688,
+              "x2": 927.6959838867188,
+              "y2": 771.6384887695312
+            },
+            "confidence": 0.21467992663383484,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000107:observation:0002",
+          "frame_id": "source-frame-000107",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.570233+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 270.544677734375,
+              "y1": 543.7881469726562,
+              "x2": 300.1776428222656,
+              "y2": 585.0195922851562
+            },
+            "confidence": 0.1753247231245041,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000108",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 108,
+        "captured_at": "1970-01-01T00:00:03.603600+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000108:observation:0000",
+          "frame_id": "source-frame-000108",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.603600+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 503.34210205078125,
+              "y1": 726.1144409179688,
+              "x2": 529.430419921875,
+              "y2": 770.8414306640625
+            },
+            "confidence": 0.2805195450782776,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000108:observation:0001",
+          "frame_id": "source-frame-000108",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.603600+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 271.0780334472656,
+              "y1": 537.3551025390625,
+              "x2": 300.43524169921875,
+              "y2": 581.73876953125
+            },
+            "confidence": 0.1676231175661087,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000109",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 109,
+        "captured_at": "1970-01-01T00:00:03.636967+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000109:observation:0000",
+          "frame_id": "source-frame-000109",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.636967+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 853.8612670898438,
+              "y1": 682.3671264648438,
+              "x2": 884.89892578125,
+              "y2": 724.3330688476562
+            },
+            "confidence": 0.11103583127260208,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000109:observation:0001",
+          "frame_id": "source-frame-000109",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.636967+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 194.73509216308594,
+              "y1": 652.047607421875,
+              "x2": 222.7826385498047,
+              "y2": 696.73779296875
+            },
+            "confidence": 0.1073073223233223,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000110",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 110,
+        "captured_at": "1970-01-01T00:00:03.670333+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000110:observation:0000",
+          "frame_id": "source-frame-000110",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.670333+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 856.3275146484375,
+              "y1": 670.9483032226562,
+              "x2": 885.2385864257812,
+              "y2": 711.1300659179688
+            },
+            "confidence": 0.1500067561864853,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000110:observation:0001",
+          "frame_id": "source-frame-000110",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.670333+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 332.6407775878906,
+              "y1": 438.25360107421875,
+              "x2": 355.350341796875,
+              "y2": 479.5015869140625
+            },
+            "confidence": 0.12119404971599579,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000110:observation:0002",
+          "frame_id": "source-frame-000110",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.670333+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 505.1245422363281,
+              "y1": 709.5697631835938,
+              "x2": 531.7617797851562,
+              "y2": 757.6265258789062
+            },
+            "confidence": 0.11306223273277283,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000110:observation:0003",
+          "frame_id": "source-frame-000110",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.670333+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 269.928955078125,
+              "y1": 517.049560546875,
+              "x2": 296.20751953125,
+              "y2": 560.1458740234375
+            },
+            "confidence": 0.10696794837713242,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000111",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 111,
+        "captured_at": "1970-01-01T00:00:03.703700+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000111:observation:0000",
+          "frame_id": "source-frame-000111",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.703700+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 436.83721923828125,
+              "y1": 818.7455444335938,
+              "x2": 466.12054443359375,
+              "y2": 851.41943359375
+            },
+            "confidence": 0.10716439038515091,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000111:observation:0001",
+          "frame_id": "source-frame-000111",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.703700+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 842.4266967773438,
+              "y1": 765.470458984375,
+              "x2": 871.3782348632812,
+              "y2": 816.9154052734375
+            },
+            "confidence": 0.1026090681552887,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000112",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 112,
+        "captured_at": "1970-01-01T00:00:03.737067+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000112:observation:0000",
+          "frame_id": "source-frame-000112",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.737067+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 436.4123840332031,
+              "y1": 807.2546997070312,
+              "x2": 467.9358215332031,
+              "y2": 843.9299926757812
+            },
+            "confidence": 0.1491832733154297,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000113",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 113,
+        "captured_at": "1970-01-01T00:00:03.770433+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000113:observation:0000",
+          "frame_id": "source-frame-000113",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.770433+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 504.7276916503906,
+              "y1": 683.0347290039062,
+              "x2": 528.5608520507812,
+              "y2": 723.7428588867188
+            },
+            "confidence": 0.22806766629219055,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000113:observation:0001",
+          "frame_id": "source-frame-000113",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.770433+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 438.0186767578125,
+              "y1": 797.7976684570312,
+              "x2": 465.42242431640625,
+              "y2": 832.0424194335938
+            },
+            "confidence": 0.19257032871246338,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000113:observation:0002",
+          "frame_id": "source-frame-000113",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.770433+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1118.271240234375,
+              "y1": 631.753662109375,
+              "x2": 1149.78076171875,
+              "y2": 673.2515869140625
+            },
+            "confidence": 0.15807747840881348,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000113:observation:0003",
+          "frame_id": "source-frame-000113",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.770433+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 266.95672607421875,
+              "y1": 485.3255310058594,
+              "x2": 294.6177978515625,
+              "y2": 532.4692993164062
+            },
+            "confidence": 0.1411987692117691,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000114",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 114,
+        "captured_at": "1970-01-01T00:00:03.803800+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000114:observation:0000",
+          "frame_id": "source-frame-000114",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.803800+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 503.01983642578125,
+              "y1": 676.5015258789062,
+              "x2": 527.2984008789062,
+              "y2": 718.4172973632812
+            },
+            "confidence": 0.3230304718017578,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000115",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 115,
+        "captured_at": "1970-01-01T00:00:03.837167+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000115:observation:0000",
+          "frame_id": "source-frame-000115",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.837167+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 898.9806518554688,
+              "y1": 658.5179443359375,
+              "x2": 921.9926147460938,
+              "y2": 697.8570556640625
+            },
+            "confidence": 0.1600223183631897,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000115:observation:0001",
+          "frame_id": "source-frame-000115",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.837167+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 500.83135986328125,
+              "y1": 663.165771484375,
+              "x2": 525.6416015625,
+              "y2": 707.1734619140625
+            },
+            "confidence": 0.13049449026584625,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000116",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 116,
+        "captured_at": "1970-01-01T00:00:03.870533+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000116:observation:0000",
+          "frame_id": "source-frame-000116",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.870533+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 470.7415466308594,
+              "y1": 482.4582824707031,
+              "x2": 497.79364013671875,
+              "y2": 529.0877075195312
+            },
+            "confidence": 0.1907370537519455,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000116:observation:0001",
+          "frame_id": "source-frame-000116",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.870533+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 502.58642578125,
+              "y1": 655.865966796875,
+              "x2": 524.47412109375,
+              "y2": 693.488525390625
+            },
+            "confidence": 0.1112619936466217,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000117",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 117,
+        "captured_at": "1970-01-01T00:00:03.903900+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000117:observation:0000",
+          "frame_id": "source-frame-000117",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.903900+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 329.4737548828125,
+              "y1": 370.4154052734375,
+              "x2": 350.956787109375,
+              "y2": 403.81329345703125
+            },
+            "confidence": 0.10885556042194366,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000118",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 118,
+        "captured_at": "1970-01-01T00:00:03.937267+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000118:observation:0000",
+          "frame_id": "source-frame-000118",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.937267+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 895.5166625976562,
+              "y1": 626.3035278320312,
+              "x2": 918.6337280273438,
+              "y2": 661.8514404296875
+            },
+            "confidence": 0.12376696616411209,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        },
+        {
+          "observation_id": "recorded-camera-01:source-frame-000118:observation:0001",
+          "frame_id": "source-frame-000118",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.937267+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 1410.5462646484375,
+              "y1": 416.983154296875,
+              "x2": 1431.416259765625,
+              "y2": 462.2728271484375
+            },
+            "confidence": 0.10587667673826218,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000119",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 119,
+        "captured_at": "1970-01-01T00:00:03.970633+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": [
+        {
+          "observation_id": "recorded-camera-01:source-frame-000119:observation:0000",
+          "frame_id": "source-frame-000119",
+          "sensor_id": "recorded-camera-01",
+          "captured_at": "1970-01-01T00:00:03.970633+00:00",
+          "detection": {
+            "bbox": {
+              "x1": 138.71536254882812,
+              "y1": 384.57659912109375,
+              "x2": 165.79547119140625,
+              "y2": 433.1496276855469
+            },
+            "confidence": 0.10380823165178299,
+            "class_id": 0,
+            "class_name": "UAV",
+            "model_id": "ultralytics:best.pt",
+            "schema_version": "1.0"
+          },
+          "bearing_degrees": null,
+          "elevation_degrees": null,
+          "schema_version": "1.0"
+        }
+      ]
+    },
+    {
+      "frame": {
+        "frame_id": "source-frame-000120",
+        "sensor_id": "recorded-camera-01",
+        "sequence_number": 120,
+        "captured_at": "1970-01-01T00:00:04.004000+00:00",
+        "width": 1920,
+        "height": 1080,
+        "schema_version": "1.0"
+      },
+      "observations": []
+    }
+  ]
+}
