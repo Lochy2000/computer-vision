@@ -1,0 +1,49 @@
+{
+  "checkpoint": "3.2.4",
+  "checked_at_utc": "2026-10-20T10:19:21.399891+00:00",
+  "manifest": "C:\\Users\\User\\OneDrive\\Desktop\\Coding-practice\\python\\computer-vision\\v3\\manifests\\evaluation-pexels-meadow.json",
+  "policy": "C:\\Users\\User\\OneDrive\\Desktop\\Coding-practice\\python\\computer-vision\\v3\\v3.2\\configs\\detector-validation-3.2.4.json",
+  "policy_id": "detector-validation:3.2.4-v1",
+  "audit": {
+    "ready": false,
+    "image_count": 12,
+    "complete_annotation_count": 0,
+    "missing_files": [],
+    "hash_mismatches": [],
+    "duplicate_image_hashes": [],
+    "invalid_records": [
+      "pexels-meadow-close-drone-v1-frame-000000: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000016: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000032: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000048: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000064: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000080: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000097: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000113: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000129: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000145: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000161: split 'unassigned' is not allowed",
+      "pexels-meadow-close-drone-v1-frame-000177: split 'unassigned' is not allowed"
+    ],
+    "stratum_counts": {
+      "close_drone": 12,
+      "medium_drone": 0,
+      "distant_drone": 0,
+      "bird": 0,
+      "negative_empty_sky": 0,
+      "negative_clutter": 0
+    },
+    "missing_strata": [
+      "medium_drone",
+      "distant_drone",
+      "bird",
+      "negative_empty_sky",
+      "negative_clutter"
+    ],
+    "blockers": [
+      "12 images lack complete human-reviewed annotations",
+      "required scenario strata are missing",
+      "manifest or label records are invalid"
+    ]
+  }
+}

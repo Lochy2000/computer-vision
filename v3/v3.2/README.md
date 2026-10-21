@@ -7,7 +7,7 @@ One folder contains the complete v3.2 line. Incremental checkpoints are named
 `3.2.1`, `3.2.2`, `3.2.3`, and so on; they do not receive separate project
 folders.
 
-## Current checkpoint: 3.2.3
+## Current checkpoint: 3.2.4
 
 This checkpoint contains:
 
@@ -24,6 +24,8 @@ This checkpoint contains:
 - a frozen 61-frame recorded-video observation fixture;
 - a hash-bound detector manifest, ByteTrack replay, manual review, and visual
   observation overlay.
+- a detector-validation policy and automated readiness audit covering file
+  hashes, annotations, splits, duplicate content, and required scenario strata.
 
 It contains no BoT-SORT comparison, live video pipeline, event database,
 thermal processing, fusion, or alerting.
@@ -36,6 +38,11 @@ The first controlled real-video case is deliberately retained as a failed
 baseline. The visible drone received fragmented component/background boxes and
 ByteTrack produced no track. See
 `checkpoints/3.2.3-recorded-video-evaluation.md` before changing thresholds.
+
+The 3.2.4 audit reuses the 12 existing close-drone candidate images. Their
+files and hashes are valid, but they are not annotated and five required
+scenario strata are absent, so the development validation gate is correctly
+closed. See `checkpoints/3.2.4-detector-validation-contract.md`.
 
 ## Evaluation flow
 

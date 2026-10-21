@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "counter-uas-v3-2"
-version = "0.2.3"
+version = "0.2.4"
 description = "Counter-UAS tracking evaluation and tracker adapters"
 requires-python = ">=3.10"
 dependencies = [

@@ -1,0 +1,23 @@
+{
+  "policy_id": "detector-validation:3.2.4-v1",
+  "purpose": "Model-development validation only; never the locked final test",
+  "allowed_splits": ["validation"],
+  "required_strata": [
+    "close_drone",
+    "medium_drone",
+    "distant_drone",
+    "bird",
+    "negative_empty_sky",
+    "negative_clutter"
+  ],
+  "scenario_aliases": {
+    "close_drone_meadow": "close_drone"
+  },
+  "rules": [
+    "Annotations must be drawn or verified by a person and must not be copied from model predictions.",
+    "All images from one video or capture session remain in one split.",
+    "Negative images require a reviewed, empty YOLO label file.",
+    "Target distance strata must ultimately be defined by labelled target pixel size, not guessed physical range.",
+    "This validation set may guide development; it must not replace the untouched locked test."
+  ]
+}

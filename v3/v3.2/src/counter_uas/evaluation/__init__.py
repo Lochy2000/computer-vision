@@ -16,6 +16,10 @@ from counter_uas.evaluation.recorded import (
     summarize_observations,
     summarize_replay,
 )
+from counter_uas.evaluation.validation_set import (
+    ValidationSetAudit,
+    audit_validation_manifest,
+)
 
 __all__ = [
     "FrameObservations",
@@ -28,5 +32,7 @@ __all__ = [
     "sha256_file",
     "summarize_observations",
     "summarize_replay",
+    "ValidationSetAudit",
+    "audit_validation_manifest",
 ]
 
